@@ -8,14 +8,23 @@ set $mod Mod4
 
 font pango:monospace 8
 
+## Border style :
+
+for_window [class="^.*"] border pixel 3 
+
+## gaps style :
+
+gaps inner 10
+gaps outer 10
 ## Use Mouse+$mod to drag floating windows to their wanted position
+
 
 floating_modifier $mod
 
 ## Basic bindings : 
 
 bindsym $mod+Return exec st
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -28,7 +37,7 @@ exec_always --no-startup-id  feh --bg-scale ~/Images/wall.png
 
 ## For transparency :
 
-exec --no-startup-id compton
+exec --no-startup-id compton --xrender-sync-fence
 
 # change focus
 bindsym $mod+j focus left
