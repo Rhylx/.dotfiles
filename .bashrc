@@ -9,4 +9,3 @@ alias ls='ls -hN --color=auto --group-directories-first'
 # Setting bash prompt : 
 
 PS1='[\u@\h \W]\$ '
-
