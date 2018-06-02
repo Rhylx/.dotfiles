@@ -82,8 +82,8 @@ xkb_symbols "editing" {
     
     // To comment out at the end of the customisation :
 
-    key   <UP> {	[  Up			]	};
-    key <LEFT> {	[  Left			]	};
-    key <DOWN> {	[  Down			]	};
-    key <RGHT> {	[  Right		]	};
+      key   <UP> {	[  Up			]	};
+//    key <LEFT> {	[  Left			]	};
+//    key <DOWN> {	[  Down			]	};
+//    key <RGHT> {	[  Right		]	};
 };

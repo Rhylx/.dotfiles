@@ -54,8 +54,8 @@ xkb_symbols "basic" {
     key <AD08>	{ [	i,		I,		minus		],[minus] };	
     key <AD09>	{ [	o,		O,		bar		],[bar] };	
     key <AD10>	{ [	p,		P,		underscore	],[underscore] };
-    key <AD11>	{ [	dead_circumflex,dead_diaeresis,	plus		],[plus] };
-    key <AD12>	{ [	d,      	j,	        equal	        ],[equal] };	
+    key <AD11>	{ [	dead_acute,	dead_grave,	plus		],[plus] };
+    key <AD12>	{ [	dead_circumflex,dead_diaeresis,	        equal	],[equal] };	
 
     // Third row
     key <AC01>	{ [	q,		Q,		1		],[1] };
