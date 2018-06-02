@@ -3,8 +3,6 @@ include "azerty-layout"
 include "linux-with-alt-and-altgr"
 strings as usual
 
-keycode   1 = Escape           Escape          
-	alt     keycode   1 = Meta_Escape     
 keycode   2 = ampersand        one             
 	alt     keycode   2 = Meta_one        
 keycode   3 = braceleft        two              asciitilde      
@@ -73,7 +71,6 @@ keycode  56 = Alt
 keycode  57 = space            space           
 	control keycode  57 = nul             
 	alt     keycode  57 = Meta_space      
-keycode  58 = Caps_Lock       
 keycode  86 = less             greater          bar             
 	alt     keycode  86 = Meta_less       
 keycode  97 = Control         
