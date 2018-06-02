@@ -1,0 +1,86 @@
+partial alphanumeric_keys
+xkb_symbols "basic" {
+    name[Group1]="French (AZERTY)";
+    name[Group2]="French (AZERTY)";
+
+    include "level3(ralt_switch)"
+    include "group(lswitch)"
+
+// Rhylx  AZERTY-Keyboard layout
+// Author : 2018, Rhylx
+// Based on the fr(azerty) layout
+
+// LAYOUT OVERVIEW                              
+//  ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ _______
+// |    | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 0  | °  | +  | <--   |
+// | ²  | &  | é ~| " #| ' {| ( [| - || è `| _ \| ç ^| à @| ) ]| = }|       |
+//  ========================================================================
+// | |<-  | A  | Z  | E  | R  | T  | Y  | U  | I  | O  | P  | ¨  | `  |   , |
+// |  ->| | a @| z ~| e "| r }| t )| y ]| u -| i || o _| p _| ^ +| ' =| <-' |
+//  ===================================================================¬    |
+// |       | Q  | S  | D  | F  | G  | H  | J  | K  | L  | M  |   | µ  |    |
+// | ESC   | q  | s  | d  | f  | g  | h  | j  | k  | l  | m  | % | *  |    |
+//  ========================================================================
+// | ^   | >  | W  | X  | C  | V  | B  | N  | ?  | ;  | /  | §  |     ^     |
+// | |   | <  | w  | x  | c  | v  | b  | n  | ,  | .  | :  | !  |     |     |
+//  ========================================================================
+// |      |      |      |                       |       |      |     |      |
+// | Ctrl | Super| Alt  | Space    Nobreakspace | AltGr | Super|Menu | Ctrl |
+//  ¯¯¯¯¯¯ ¯¯¯¯¯¯ ¯¯¯¯¯¯ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ ¯¯¯¯¯¯¯ ¯¯¯¯¯¯ ¯¯¯¯¯ ¯¯¯¯¯¯
+
+    // First row
+    key <TLDE>	{ [	twosuperior 					] };
+    key <AE01>	{ [	ampersand,	1 				] };
+    key <AE02>  { [	eacute,		2,		asciitilde	] };
+    key <AE03>	{ [	quotedbl,	3,		numbersign	] };
+    key <AE04>	{ [	apostrophe,	4,		braceleft	] };
+    key <AE05>	{ [	parenleft,	5,		bracketleft	] };
+    key <AE06>	{ [	minus,		6,		bar		] };
+    key <AE07>	{ [	egrave,		7,		grave		] };
+    key <AE08>	{ [	underscore, 	8,		backslash	] };
+    key <AE09>	{ [	ccedilla, 	9,		asciicircum	] };
+    key <AE10>	{ [	agrave,		0,		at		] };
+    key <AE11>	{ [	parenright,	degree,		bracketright	] };
+    key <AE12>	{ [	equal,		plus,		braceright	] };
+
+    // Second row
+    key <AD01>	{ [	a,		A,              at		],[at] };
+    key <AD02>	{ [	z,		Z,		asciitilde	],[asciitilde] };
+    key <AD03>	{ [	e,		E,		quotedbl	],[quotedbl] };	
+    key <AD04>	{ [	r,		R,		numbersign	],[numbersign] };
+    key <AD05>	{ [	t,		T,		braceright	],[braceleft] };
+    key <AD06>	{ [	y,		Y,		parenright	],[parenleft] };	
+    key <AD07>	{ [	u,		U,		bracketright	],[bracketleft] };	
+    key <AD08>	{ [	i,		I,		minus		],[minus] };	
+    key <AD09>	{ [	o,		O,		bar		],[bar] };	
+    key <AD10>	{ [	p,		P,		underscore	],[underscore] };
+    key <AD11>	{ [	dead_circumflex,dead_diaeresis,	plus		],[plus] };
+    key <AD12>	{ [	d,      	j,	        equal	        ],[equal] };	
+
+    // Third row
+    key <AC01>	{ [	q,		Q,		1		],[1] };
+    key <AC02>	{ [	s,		S,		2		],[2] };
+    key <AC03>	{ [	d,		D,		3		],[3] };	
+    key <AC04>	{ [	f,		F,		4		],[4] };
+    key <AC05>	{ [	g,		G,		5		],[5] };	
+    key <AC06>	{ [	h,		H,		6		],[6] };
+    key <AC07>	{ [	j,		J,		7		],[7] };
+    key <AC08>	{ [	k,		K,		8		],[8] };
+    key <AC09>	{ [	l,		L,		9		],[9] };
+    key <AC10>	{ [	m,		M,		0		],[0] };	
+    key <AC11>	{ [	percent						]     };
+    key <BKSL>  { [	asterisk,	mu				]     };
+
+    // Fourth row
+    key <LSGT>	{ [	less,		greater				] };
+    key <AB01>	{ [	w,		W				] };
+    key <AB02>	{ [	x,		X				] };
+    key <AB03>	{ [	c,		C,		dollar		],[dollar]};
+    key <AB04>	{ [	v,		V				] };	
+    key <AB05>  { [	b,		B				] };
+    key <AB06>	{ [	n,		N				] };
+    key <AB07>	{ [	comma,		question			] };
+    key <AB08>	{ [ 	period,		semicolon			] };
+    key <AB09>	{ [ 	colon,		slash				] };
+    key <AB10>	{ [	exclam,		section				] };
+};
