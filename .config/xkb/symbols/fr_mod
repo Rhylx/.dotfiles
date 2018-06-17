@@ -62,9 +62,9 @@ xkb_symbols "basic" {
     key <AC02>	{ [	s,		S,		asciitilde	] };
     key <AC03>	{ [	d,		D,		quotedbl	] };	
     key <AC04>	{ [	f,		F,		numbersign	] };
-    key <AC05>	{ [	g,		G,		braceright	] };	
-    key <AC06>	{ [	h,		H,		parenright	] };
-    key <AC07>	{ [	j,		J,		bracketright	] };
+    key <AC05>	{ [	g,		G,		braceleft	] };	
+    key <AC06>	{ [	h,		H,		parenleft	] };
+    key <AC07>	{ [	j,		J,		bracketleft	] };
     key <AC08>	{ [	k,		K,		minus		] };
     key <AC09>	{ [	l,		L,		bar		] };
     key <AC10>	{ [	m,		M,		underscore	] };	
@@ -76,9 +76,9 @@ xkb_symbols "basic" {
     key <AB01>	{ [	w,		W				] };
     key <AB02>	{ [	x,		X				] };
     key <AB03>	{ [	c,		C,		dollar		] };
-    key <AB04>	{ [	v,		V,		braceleft	] };	
-    key <AB05>  { [	b,		B,		parenleft	] };
-    key <AB06>	{ [	n,		N,		bracketleft	] };
+    key <AB04>	{ [	v,		V,		braceright	] };	
+    key <AB05>  { [	b,		B,		parenright	] };
+    key <AB06>	{ [	n,		N,		bracketright	] };
     key <AB07>	{ [	comma,		question			] };
     key <AB08>	{ [ 	period,		semicolon			] };
     key <AB09>	{ [ 	colon,		slash				] };
