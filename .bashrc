@@ -3,8 +3,8 @@
 #
 # Activate vi mode :
 
-#set -o vi
-#bind ^l : clear-screen
+set -o vi
+bind '"\C-l": clear-screen'
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
