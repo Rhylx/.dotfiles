@@ -18,8 +18,8 @@ xkb_symbols "basic" {
 // | |<-  | A  | Z  | E  | R  | T  | Y  | U  | I  | O  | P  | `  | ¨  |   , |
 // |  ->| | a  | z  | e  | r  | t  | y  | u  | i  | o  | p  | ´  | ^  | <-' |
 //  ===================================================================¬    |
-// |       | Q  | S  | D  | F  | G  | H  | J  | K  | L  | M  |   | µ  |    |
-// | ESC   | q @| s ~| d "| f #| g {| h (| j [| k -| l || m _| % | *  |    |
+// |       | Q  | S  | D  | F  | G  | H  | J  | K  | L  | M  | \  | µ  |    |
+// | ESC   | q @| s ~| d "| f #| g {| h (| j [| k -| l || m _| % \| * '|    |
 //  ========================================================================
 // | ^   | >  | W  | X  | C  | V  | B  | N  | ?  | ;  | /  | §  |     ^     |
 // | |   | <  | w  | x  | c $| v }| b )| n ]| ,  | .  | :  | !  |     |     |
@@ -68,8 +68,8 @@ xkb_symbols "basic" {
     key <AC08>	{ [	k,		K,		minus		] };
     key <AC09>	{ [	l,		L,		bar		] };
     key <AC10>	{ [	m,		M,		underscore	] };	
-    key <AC11>	{ [	percent						] };
-    key <BKSL>  { [	asterisk,	mu				] };
+    key <AC11>	{ [	percent,	backslash,	backslash	] };
+    key <BKSL>  { [	asterisk,	mu,		apostrophe	] };
 
     // Fourth row
     key <LSGT>	{ [	less,		greater				] };
