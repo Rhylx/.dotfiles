@@ -2,6 +2,8 @@
 
 " Some basic vim tools : 
 
+	syntax on
+	set nocompatible
 	set encoding=utf-8
 	set number
 	set relativenumber
