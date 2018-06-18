@@ -21,8 +21,8 @@ xkb_symbols "basic" {
 // |       | Q  | S  | D  | F  | G  | H  | J  | K  | L  | M  | \  | µ  |    |
 // | ESC   | q @| s ~| d "| f #| g {| h (| j [| k -| l || m _| % \| * '|    |
 //  ========================================================================
-// | ^   | >  | W  | X  | C  | V  | B  | N  | ?  | ;  | /  | §  |     ^     |
-// | |   | <  | w  | x  | c $| v }| b )| n ]| ,  | .  | :  | !  |     |     |
+// | ^   | <  | W  | X  | C  | V  | B  | N  | ?  | ;  | /  | §  |     ^     |
+// | |   | >  | w  | x  | c $| v }| b )| n ]| ,  | .  | :  | !  |     |     |
 //  ========================================================================
 // |      |      |      |                       |       |      |     |      |
 // | Ctrl | Super| Alt  | Space    Nobreakspace | AltGr | Super|Menu | Ctrl |
@@ -72,7 +72,7 @@ xkb_symbols "basic" {
     key <BKSL>  { [	asterisk,	mu,		apostrophe	] };
 
     // Fourth row
-    key <LSGT>	{ [	less,		greater				] };
+    key <LSGT>	{ [	greater,	less				] };
     key <AB01>	{ [	w,		W				] };
     key <AB02>	{ [	x,		X				] };
     key <AB03>	{ [	c,		C,		dollar		] };
