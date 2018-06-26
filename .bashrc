@@ -5,7 +5,6 @@
 
 set -o vi
 bind '"\C-l": clear-screen'
-
 # If not running interactively, don't do anything
 
 [[ $- != *i* ]] && return
