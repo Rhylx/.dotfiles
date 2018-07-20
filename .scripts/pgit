@@ -1,0 +1,20 @@
+#!/bin/bash
+# This basic script make pushing on git more quicker
+
+
+echo  "Are you in the right git repo you want to push in?"
+select yn in "Yes" "No"; do
+	case $yn in
+	Yes ) 
+read -p "Which files do you want to add to git ?  " fadd
+read -p "What is your commit message ?  " mess
+git add -u
+git add $fadd
+git commit -m "$mess"
+git push
+;;
+	No  ) 
+echo "then go there first ;)" 
+exit;;
+  	esac
+done 
