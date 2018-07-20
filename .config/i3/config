@@ -227,11 +227,11 @@ bindsym XF86AudioStop		exec --no-startup-id lmc toggle
 bindsym XF86AudioRewind		exec --no-startup-id lmc back 10
 bindsym XF86AudioForward	exec --no-startup-id lmc forward 10
 ##bindsym XF86Phone		exec
-##bindsym XF86Tools		exec
-bindsym XF86HomePage		exec $BROWSER https://lukesmith.xyz
+##bindsym XF86Tools		exec --no-startup-id $term
+##bindsym XF86HomePage		exec $BROWSER https://lukesmith.xyz
 bindsym XF86Reload		restart
 ##bindsym XF86ScrollUp		exec
-##bindsym XF86ScrollDown		exec
+##bindsym XF86ScrollDown	exec
 ##bindsym XF86New		exec
 ##bindsym XF86LaunchA		exec
 ##bindsym XF86LaunchB		exec
@@ -257,13 +257,13 @@ bindsym XF86Search		exec $BROWSER https://duckduckgo.com
 ##bindsym XF86Finance		exec
 ##bindsym XF86Game		exec
 bindsym XF86Shop		exec $BROWSER https://ebay.com
-bindsym XF86MonBrightnessDown	exec --no-startup-id xbacklight -dec 15
-bindsym XF86MonBrightnessUp	exec --no-startup-id xbacklight -inc 15
+bindsym XF86MonBrightnessDown	exec --no-startup-id lux -s 5%
+bindsym XF86MonBrightnessUp	exec --no-startup-id lux -a 5%
 bindsym XF86AudioMedia		exec --no-startup-id st -e ncmpcpp
 bindsym XF86Display		exec --no-startup-id arandr
 #bindsym XF86KbdLightOnOff	exec
-bindsym XF86KbdBrightnessDown	exec --no-startup-id python3.6 ~/.i3/kb-lights.py -
-bindsym XF86KbdBrightnessUp	exec --no-startup-id python3.6 ~/.i3/kb-lights.py +
+#bindsym XF86KbdBrightnessDown	exec --no-startup-id lux -s 5%
+#bindsym XF86KbdBrightnessUp	exec --no-startup-id lux -a 5%
 ##bindsym XF86Reply		exec
 ##bindsym XF86MailForward	exec
 ##bindsym XF86Save		exec

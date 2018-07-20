@@ -18,5 +18,5 @@
 
 " Copy and paste with clipboard ( to fix : get rid of gvim which is still necessary for the + and * buffer) : 
 
-	vnoremap <C-c> "*y :let @+=@*<CR>
-	map <C-p> "+P
+	vnoremap <C-c> "*Y :let @+=@*<CR>
+	map <C-p> "+p
