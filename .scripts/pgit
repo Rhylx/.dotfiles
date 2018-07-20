@@ -1,5 +1,5 @@
 #!/bin/bash
-# This basic script make pushing on git more quicker
+# This basic script make pushing on git more easier
 
 
 echo  "Are you in the right git repo you want to push in?"
@@ -12,6 +12,7 @@ git add -u
 git add $fadd
 git commit -m "$mess"
 git push
+exit
 ;;
 	No  ) 
 echo "then go there first ;)" 
