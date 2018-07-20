@@ -9,7 +9,7 @@ select yn in "Yes" "No"; do
 read -p "Which files do you want to add to git ?  " fadd
 read -p "What is your commit message ?  " mess
 git add -u
-if ["$fadd" != " "]
+if [ "$fadd" != " " ]
 then
 	git add $fadd
 fi
