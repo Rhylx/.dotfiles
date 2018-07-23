@@ -1,6 +1,6 @@
-" My vimrc file : 
+" My vimrc file :
 
-" Some basic vim tools : 
+" Some basic vim tools :
 
 	syntax on
 	set nocompatible
@@ -16,7 +16,16 @@
 
 	autocmd BufWritePost ~/.scripts/folders,~/.scripts/configs !bash ~/.scripts/shortcuts.sh
 
-" Copy and paste with clipboard ( to fix : get rid of gvim which is still necessary for the + and * buffer) : 
+" Copy and paste with clipboard ( to fix : get rid of gvim which is still necessary for the + and * buffer) :
 
 	vnoremap <C-c> "*Y :let @+=@*<CR>
 	map <C-p> "+p
+" Pathogen (plug-in manager) :
+
+	execute pathogen#infect()
+" Automatically deletes all tralling whitespace when file is saved :
+	autocmd BufWritePre * %s/\s\+$//e
+
+" Aliases :
+
+	nnoremap gp '"

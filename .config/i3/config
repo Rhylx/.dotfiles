@@ -1,20 +1,22 @@
 ##### My i3 config file : #####
 
-## Definition of the basic variables :
+## Definition of the basic variables and setting keyboard:
 
 set $mod Mod4
 set $term --no-startup-id st
+exec_always xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap $DISPLAY
+exec_always xset r rate 250 100
 
 
-## Font settings : 
+## Font settings :
 
 font pango:monospace 12
 
 ## Border style :
 
-for_window [class="^.*"] border pixel 3 
+for_window [class="^.*"] border pixel 3
 
-# To get rid of the indicator split : 
+# To get rid of the indicator split :
 
 #class                 border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #285577  #285577
@@ -23,7 +25,7 @@ client.unfocused        #333333 #222222 #888888 #2222222 #222222
 client.urgent           #2f343a #900000 #ffffff #900000  #900000
 client.placeholder      #000000 #0c0c0c #ffffff #0c0c0c  #0c0c0c
 
-# gaps style : 
+# gaps style :
 
 gaps inner 10
 gaps outer 10
@@ -32,7 +34,7 @@ gaps outer 10
 
 floating_modifier $mod
 
-## Main  Bindings (logic of it : every key and its shift version) : 
+## Main  Bindings (logic of it : every key and its shift version) :
 
 #bindsym $mod+a
 #bindsym $mod+shift+a
@@ -44,7 +46,7 @@ bindsym $mod+b 		  exec --no-startup-id $BROWSER
 bindsym $mod+Shift+c 	  reload
 
 bindsym $mod+d 		  gaps inner current set 10. gaps outer current set 10
-bindsym $mod+shift+d	  exec dmenu_run 
+bindsym $mod+shift+d	  exec dmenu_run
 
 #bindsym $mod+e
 #bindsym $mod+shift+e
@@ -119,11 +121,11 @@ bindsym $mod+shift+Return exec $term
 bindsym $mod+space 	  floating toggle
 bindsym $mod+Shift+space  focus mode_toggle
 
-# this is for kill i3 : 
+# this is for kill i3 :
 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-## To make the mouse invisible if it is not used : 
+## To make the mouse invisible if it is not used :
 
 exec --no-startup-id unclutter
 
@@ -135,7 +137,7 @@ exec_always --no-startup-id  feh --bg-scale ~/.config/wall.png
 
 exec --no-startup-id compton --xrender-sync-fence
 
-## Starting network-manager applet : 
+## Starting network-manager applet :
 
 exec --no-startup-id nm-applet
 # change container layout (stacked, tabbed, toggle split)
@@ -192,7 +194,7 @@ bar {
 	position top
 }
 
-# Extra shortcut with XF86 Keys 
+# Extra shortcut with XF86 Keys
 
 bindsym XF86AudioMute		exec --no-startup-id lmc mute
 bindsym XF86AudioLowerVolume	exec --no-startup-id lmc down 5
