@@ -5,7 +5,7 @@
 set $mod Mod4
 set $term --no-startup-id st
 exec_always xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap $DISPLAY
-exec_always xset r rate 250 100
+exec_always xset r rate 250 200
 
 
 ## Font settings :
@@ -196,9 +196,9 @@ bar {
 
 # Extra shortcut with XF86 Keys
 
-bindsym XF86AudioMute		exec --no-startup-id lmc mute
-bindsym XF86AudioLowerVolume	exec --no-startup-id lmc down 5
-bindsym XF86AudioRaiseVolume	exec --no-startup-id lmc up 5
+bindsym XF86AudioMute		exec --no-startup-id pamixer --allow-boost -t
+bindsym XF86AudioLowerVolume	exec --no-startup-id pamixer --allow-boost -d 5
+bindsym XF86AudioRaiseVolume	exec --no-startup-id pamixer --allow-boost -i 5
 bindsym XF86PowerOff		exec --no-startup-id prompt "Are you sure you want to shutdown?" "$shutdown"
 ##bindsym XF86Copy		exec
 ##bindsym XF86Open		exec
