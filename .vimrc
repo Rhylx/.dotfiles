@@ -3,6 +3,7 @@
 " Some basic vim tools :
 
 	syntax on
+	filetype plugin on
 	set nocompatible
 	set encoding=utf-8
 	set number
@@ -20,10 +21,13 @@
 
 	vnoremap <C-c> "*Y :let @+=@*<CR>
 	map <C-p> "+p
+
 " Pathogen (plug-in manager) :
 
 	execute pathogen#infect()
+
 " Automatically deletes all tralling whitespace when file is saved :
+
 	autocmd BufWritePre * %s/\s\+$//e
 
 " Aliases :

@@ -1,4 +1,0 @@
-curl https://raw.githubusercontent.com/LukeSmithxyz/larbs/master/src/progs.csv > /tmp/progs.csv
-rm /tmp/aur_queue &>/dev/tty6
-count=$(cat /tmp/progs.csv  | wc -l)
-echo $count
