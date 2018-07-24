@@ -2,6 +2,7 @@
 
 " Some basic vim tools :
 
+	let mapleader =" "
 	syntax on
 	filetype plugin on
 	set nocompatible
@@ -19,7 +20,7 @@
 
 " Copy and paste with clipboard ( to fix : get rid of gvim which is still necessary for the + and * buffer) :
 
-	vnoremap <C-c> "*Y :let @+=@*<CR>
+	vnoremap <C-c> "*y :let @+=@*<cr>
 	map <C-p> "+p
 
 " Pathogen (plug-in manager) :
@@ -30,6 +31,30 @@
 
 	autocmd BufWritePre * %s/\s\+$//e
 
+" Open corresponding .pdf :
+
+	map <leader>p :!zathura <c-r>%<backspace><backspace><backspace>pdf &<cr><cr>
+
+" Spell-check :
+
+	map <leader>sc :setlocal spell! spelllang=en_us,en_gb,fr<cr>
+
+" Runs script texclear when leaving .tex file :
+
+	autocmd VimLeave *.tex !texclear
+
+" Disables automatic commenting on newline after commented line :
+
+	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Navigating with sweetie guides (the one from Luke Smith are pretty nice <++>):
+
+	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
+	vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
+	map <Space><Tab> <Esc>/<++><Enter>"_c4l
+
 " Aliases :
 
-	nnoremap gp '"
+	nnoremap gp '"zz
+
+" Snippets :
