@@ -39,6 +39,10 @@
 
 	map <leader>sc :setlocal spell! spelllang=en_us,en_gb,fr<cr>
 
+ " Compile a document into pdf (rmd, tex, md) :
+
+	map <leader>c :!compile_pdf <c-r>%<cr><cr>
+
 " Runs script texclear when leaving .tex file :
 
 	autocmd VimLeave *.tex !texclear
