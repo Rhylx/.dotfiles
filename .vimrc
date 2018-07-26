@@ -58,7 +58,10 @@
 	map <Space><Tab> <Esc>/<++><Enter>"_c4l
 
 " Aliases :
-
 	nnoremap gp '"zz
+	nnoremap J      <c-e>
+	nnoremap K      <c-y>
+	nnoremap <c-j>  <c-d>
+	nnoremap <c-k>  <c-u>
 
 " Snippets :
