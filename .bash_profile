@@ -4,7 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export PATH=$PATH:$HOME/.scripts:$HOME/.vim/bundle/vim-live-latex-preview/bin
+export PATH=$PATH:$HOME/.scripts
 export EDITOR="vim"
 export TERMINAL="st"
 export BROWSER="qutebrowser"
