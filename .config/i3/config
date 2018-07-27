@@ -90,7 +90,7 @@ bindsym $mod+q 		  kill
 bindsym $mod+r 		  exec $term -e ranger
 bindsym $mod+Shift+r 	  restart
 
-#bindsym $mod+s
+bindsym $mod+s		  [instance="stuff"] scratchpad show; [instance="stuff"] move position center
 #bindsym $mod+shift+s
 
 #bindsym $mod+t
@@ -146,9 +146,17 @@ exec --no-startup-id compton --xrender-sync-fence
 ## Starting network-manager applet :
 
 exec --no-startup-id nm-applet
+
+# Scratchpad for running basic things that don't need a new terminal :
+
+for_window [instance="stuff"] floating enable
+for_window [instance="stuff"] resize set 600 400
+for_window [instance="stuff"] move scratchpad
+exec --no-startup-id $term -n stuff
+
 # change container layout (stacked, tabbed, toggle split)
 
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
