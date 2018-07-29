@@ -46,6 +46,10 @@
 " Runs script texclear when leaving .tex file :
 
 	autocmd VimLeave *.tex !texclear
+" Automatic compile and preview tex file :
+
+	autocmd Filetype tex setl updatetime=1
+	let g:livepreview_previewer = 'zathura'
 
 " Disables automatic commenting on newline after commented line :
 
@@ -63,5 +67,6 @@
 	nnoremap K      <c-y>
 	nnoremap <c-j>  <c-d>
 	nnoremap <c-k>  <c-u>
+	map <leader>ac :LLPStartPreview<cr>
 
 " Snippets :

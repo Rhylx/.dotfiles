@@ -14,7 +14,7 @@ font pango:monospace 12
 
 ## Border style :
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
 # To get rid of the indicator split :
 

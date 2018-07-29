@@ -4,8 +4,8 @@
 #
 # It compiles a document to pdf
 #
-# Uses xelatex for tex files (if you find the pdf result kind
-# of shitty, you can change it to pdftex)
+# Uses pdflatex for tex files (if you find the pdf result kind
+# of shitty, you can change it to xelatex)
 
 file=$(basename "$1")
 ext="${file##*.}"
@@ -15,6 +15,6 @@ echo $ext
 
 case "$ext" in
 	rmd) echo "require(rmarkdown); render('$file')" | R --vanilla ;;
-	tex) xelatex "$file" ;;
-	md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+	tex) pdflatex "$file" ;;
+	md) pandoc "$file" --pdf-engine=pdflatex -o "$base".pdf ;;
 esac
