@@ -152,6 +152,7 @@ exec --no-startup-id nm-applet
 for_window [instance="stuff"] floating enable
 for_window [instance="stuff"] resize set 600 400
 for_window [instance="stuff"] move scratchpad
+for_window [instance="stuff"] border pixel 0
 exec --no-startup-id $term -n stuff
 
 # change container layout (stacked, tabbed, toggle split)

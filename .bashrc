@@ -35,6 +35,12 @@ alias gc="git commit"
 alias mkd="mkdir -pv"
 alias rfb="source ~/.bashrc"
 alias bw="wal -i ~/.config/wall.png"
+alias tfe="sdcv --utf8-output -uc \"French - English\""
+alias tfg="sdcv --utf8-output -uc \"French - German\""
+alias tge="sdcv --utf8-output -uc \"German - English\""
+alias teg="sdcv --utf8-output -uc \"English - German\""
+alias tef="sdcv --utf8-output -uc \"English - French\""
+alias tgf="sdcv --utf8-output -uc \"German - French\""
 
 # Sourcing shortcuts
 
