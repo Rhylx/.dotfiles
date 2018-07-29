@@ -35,6 +35,14 @@
 
 	map <leader>p :!zathura <c-r>%<backspace><backspace><backspace>pdf &<cr><cr>
 
+" Make all .pdf black :
+
+	nnoremap mb :!pdf_black <cr><cr>
+
+"Make all .pdf white :
+
+	nnoremap mw :!pdf_white <cr><cr>
+
 " Spell-check :
 
 	map <leader>sc :setlocal spell! spelllang=en_us,en_gb,fr<cr>
@@ -46,6 +54,7 @@
 " Runs script texclear when leaving .tex file :
 
 	autocmd VimLeave *.tex !texclear
+
 " Automatic compile and preview tex file :
 
 	autocmd Filetype tex setl updatetime=1
