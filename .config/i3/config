@@ -48,13 +48,13 @@ bindsym $mod+Shift+c 	  reload
 bindsym $mod+d 		  gaps inner current set 10. gaps outer current set 10
 bindsym $mod+shift+d	  exec dmenu_run
 
-#bindsym $mod+e
+bindsym $mod+e		  [instance="stuff"] scratchpad show; [instance="stuff"] move position center
 #bindsym $mod+shift+e
 
 bindsym $mod+f 		  fullscreen toggle
 bindsym $mod+shift+f	  gaps inner current set 0; gaps outer current set 0
 
-bindsym $mod+g		  [instance="stuff"] scratchpad show; [instance="stuff"] move position center
+bindsym $mod+g		  exec --no-startup-id gimp
 #bindsym $mod+shift+g
 
 bindsym $mod+h 		  focus left
@@ -158,8 +158,8 @@ exec --no-startup-id $term -n stuff
 # change container layout (stacked, tabbed, toggle split)
 
 #bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
