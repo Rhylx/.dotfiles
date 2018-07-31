@@ -64,14 +64,16 @@
 
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Navigating with sweetie guides (the one from Luke Smith are pretty nice <++>):
+" Navigating with sweetie guides (the one from Luke Smith are pretty nice):
 
-	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-	vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-	map <Space><Tab> <Esc>/<++><Enter>"_c4l
+	inoremap <Space><Tab> <Esc>/<++><cr>"_c4l
+	vnoremap <Space><Tab> <Esc>/<++><cr>"_c4l
+	map <Space><Tab> <Esc>/<++><cr>"_c4l
 
 " Aliases :
 	nnoremap gp '"zz
+	nnoremap gb<TAB> ``
+	inoremap gb<TAB> <Esc>``
 	nnoremap J      <c-e>
 	nnoremap K      <c-y>
 	nnoremap <c-j>  <c-d>
@@ -79,3 +81,25 @@
 	map <leader>ac :LLPStartPreview<cr>
 
 " Snippets :
+
+"""LATEX/General :
+
+	" count words with F3:
+	autocmd FileType tex map <F3> :w !detex \| wc -w<cr>
+	autocmd FileType tex inoremap <F3> <ESC>:w !detex \| wc -w<cr>
+
+	autocmd FileType tex inoremap em<TAB> \emp{}<++><ESC>T{i
+	autocmd FileType tex inoremap b<TAB> \textbf{}<++><ESC>T{i
+	autocmd FileType tex inoremap i<TAB> \textit{}<++><ESC>T{i
+	autocmd FileType tex inoremap mkl<TAB> \begin{itemize}<cr><cr>\end{itemize}<cr><cr><++><Esc>3kA\item<Space>
+
+	autocmd FileType tex inoremap g<TAB>  <++>
+	autocmd FileType tex nnoremap g<TAB>  i<++><Esc>
+	autocmd FileType tex inoremap ni<TAB> <cr>\item<Space>
+	autocmd FileType tex inoremap chap<TAB> \chapter{}<Enter><cr><++><Esc>2kf}i
+	autocmd FileType tex inoremap sec<TAB> \section{}<cr><cr><++><Esc>2kf}i
+	autocmd FileType tex inoremap ssec<TAB> \subsection{}<cr><cr><++><Esc>2kf}i
+	autocmd FileType tex inoremap up<TAB> <Esc>/usepackage<cr>o\usepackage{}<Esc>i
+	autocmd FileType tex nnoremap up<TAB> /usepackage<cr>o\usepackage{}<Esc>i
+	autocmd FileType tex inoremap fig<TAB> \begin{figure}[h]<cr>\centering<cr>\includegraphics[width=0.5\textwidth]{a}<cr><++><cr>\end{figure}<cr><cr><++><Esc>?a<cr>ci{
+	autocmd FileType tex inoremap beg<TAB> \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
