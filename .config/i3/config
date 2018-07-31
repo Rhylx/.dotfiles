@@ -60,7 +60,7 @@ bindsym $mod+g		  exec --no-startup-id gimp
 bindsym $mod+h 		  focus left
 bindsym $mod+shift+h 	  move left 30
 
-#bindsym $mod+i
+bindsym $mod+i		  exec --no-startup-id ipe
 bindsym $mod+shift+i	  exec --no-startup-id "bash ~/.scripts/i3resize down"
 
 bindsym $mod+j		  focus down

@@ -10,7 +10,7 @@ xkb_symbols "basic" {
 // Author : 2018, Rhylx
 // Based on the fr(azerty) layout
 
-// LAYOUT OVERVIEW                              
+// LAYOUT OVERVIEW
 //  ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ _______
 // |    |    |    |    |    |    |    |    |    |    |    |    |    | <--   |
 // | ²  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 0  | +  | =  |       |
@@ -19,10 +19,10 @@ xkb_symbols "basic" {
 // |  ->| | a  | z  | e  | r  | t  | y  | u  | i  | o  | p  | ´  | ^  | <-' |
 //  ===================================================================¬    |
 // |       | Q  | S  | D  | F  | G  | H  | J  | K  | L  | M  | \  | µ  |    |
-// | ESC   | q @| s ~| d "| f #| g {| h (| j [| k -| l || m _| % \| * '|    |
+// | ESC   | q @| s ~| d "| f #| g {| h [| j (| k -| l || m _| %  | *  |    |
 //  ========================================================================
 // | ^   | <  | W  | X  | C  | V  | B  | N  | ?  | ;  | /  | §  |     ^     |
-// | |   | >  | w  | x  | c $| v }| b )| n ]| ,  | .  | :  | !  |     |     |
+// | |   | >  | w \| x '| c $| v }| b ]| n )| , &| .  | :  | !  |     |     |
 //  ========================================================================
 // |      |      |      |                       |       |      |     |      |
 // | Ctrl | Super| Alt  | Space    Nobreakspace | AltGr | Super|Menu | Ctrl |
@@ -46,40 +46,40 @@ xkb_symbols "basic" {
     // Second row
     key <AD01>	{ [	a,		A             			] };
     key <AD02>	{ [	z,		Z				] };
-    key <AD03>	{ [	e,		E				] };	
+    key <AD03>	{ [	e,		E				] };
     key <AD04>	{ [	r,		R				] };
     key <AD05>	{ [	t,		T				] };
-    key <AD06>	{ [	y,		Y				] };	
-    key <AD07>	{ [	u,		U				] };	
-    key <AD08>	{ [	i,		I				] };	
-    key <AD09>	{ [	o,		O				] };	
+    key <AD06>	{ [	y,		Y				] };
+    key <AD07>	{ [	u,		U				] };
+    key <AD08>	{ [	i,		I				] };
+    key <AD09>	{ [	o,		O				] };
     key <AD10>	{ [	p,		P				] };
     key <AD11>	{ [	dead_acute,	dead_grave,	plus		] };
-    key <AD12>	{ [	dead_circumflex,dead_diaeresis,	equal		] };	
+    key <AD12>	{ [	dead_circumflex,dead_diaeresis,	equal		] };
 
     // Third row
     key <AC01>	{ [	q,		Q,		at		] };
     key <AC02>	{ [	s,		S,		asciitilde	] };
-    key <AC03>	{ [	d,		D,		quotedbl	] };	
+    key <AC03>	{ [	d,		D,		quotedbl	] };
     key <AC04>	{ [	f,		F,		numbersign	] };
-    key <AC05>	{ [	g,		G,		braceleft	] };	
-    key <AC06>	{ [	h,		H,		parenleft	] };
-    key <AC07>	{ [	j,		J,		bracketleft	] };
+    key <AC05>	{ [	g,		G,		braceleft	] };
+    key <AC06>	{ [	h,		H,		bracketleft	] };
+    key <AC07>	{ [	j,		J,		parenleft	] };
     key <AC08>	{ [	k,		K,		minus		] };
     key <AC09>	{ [	l,		L,		bar		] };
-    key <AC10>	{ [	m,		M,		underscore	] };	
-    key <AC11>	{ [	percent,	backslash,	backslash	] };
-    key <BKSL>  { [	asterisk,	mu,		apostrophe	] };
+    key <AC10>	{ [	m,		M,		underscore	] };
+    key <AC11>	{ [	percent,	backslash			] };
+    key <BKSL>  { [	asterisk,	mu				] };
 
     // Fourth row
     key <LSGT>	{ [	greater,	less				] };
-    key <AB01>	{ [	w,		W				] };
-    key <AB02>	{ [	x,		X				] };
+    key <AB01>	{ [	w,		W,		backslash	] };
+    key <AB02>	{ [	x,		X,		apostrophe	] };
     key <AB03>	{ [	c,		C,		dollar		] };
-    key <AB04>	{ [	v,		V,		braceright	] };	
-    key <AB05>  { [	b,		B,		parenright	] };
-    key <AB06>	{ [	n,		N,		bracketright	] };
-    key <AB07>	{ [	comma,		question			] };
+    key <AB04>	{ [	v,		V,		braceright	] };
+    key <AB05>  { [	b,		B,		bracketright	] };
+    key <AB06>	{ [	n,		N,		parenright	] };
+    key <AB07>	{ [	comma,		question,	ampersand	] };
     key <AB08>	{ [ 	period,		semicolon			] };
     key <AB09>	{ [ 	colon,		slash				] };
     key <AB10>	{ [	exclam,		section				] };
