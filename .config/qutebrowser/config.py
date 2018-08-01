@@ -1349,7 +1349,7 @@ c.url.searchengines = {
         'DEFAULT': 'https://duckduckgo.com/?q={}',
         'i': 'https://duckduckgo.com/?q={}&iar=images&iax=images&ia=images',
         'red': 'https://reddit.com/r/{}',
-        'gh': 'https://github.com/{}',
+        'gh': 'https://github.com/search?q={}',
         'wt': 'http://en.wiktionary.org/?search={}',
         'osm': 'http://www.openstreetmap.org/search?query={}',
         'tpb': 'http://thepiratebay.org/search/{}',
@@ -1433,7 +1433,7 @@ config.bind('<Alt-9>', 'tab-focus -1')
 config.bind('<Ctrl-A>', 'navigate increment')
 config.bind('<Ctrl-Alt-p>', 'print')
 config.bind('<Ctrl-B>', 'scroll-page 0 -1')
-config.bind('<Ctrl-D>', 'scroll-page 0 0.5')
+config.bind('<Ctrl-J>', 'scroll-page 0 0.5')
 config.bind('<Ctrl-F5>', 'reload -f')
 config.bind('<Ctrl-F>', 'scroll-page 0 1')
 config.bind('<Ctrl-N>', 'open -w')

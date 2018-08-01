@@ -88,9 +88,10 @@
 	autocmd FileType tex map <F3> :w !detex \| wc -w<cr>
 	autocmd FileType tex inoremap <F3> <ESC>:w !detex \| wc -w<cr>
 
-	autocmd FileType tex inoremap em<TAB> \emp{}<++><ESC>T{i
-	autocmd FileType tex inoremap b<TAB> \textbf{}<++><ESC>T{i
-	autocmd FileType tex inoremap i<TAB> \textit{}<++><ESC>T{i
+	autocmd FileType tex inoremap em<TAB> \emp{} <++><ESC>T{i
+	autocmd FileType tex inoremap b<TAB> \textbf{} <++><ESC>T{i
+	autocmd FileType tex inoremap u<TAB> \underline{} <++><ESC>T{i
+	autocmd FileType tex inoremap i<TAB> \textit{} <++><ESC>T{i
 	autocmd FileType tex inoremap mkl<TAB> \begin{itemize}<cr><cr>\end{itemize}<cr><cr><++><Esc>3kA\item<Space>
 
 	autocmd FileType tex inoremap g<TAB>  <++>
@@ -102,4 +103,5 @@
 	autocmd FileType tex inoremap up<TAB> <Esc>/usepackage<cr>o\usepackage{}<Esc>i
 	autocmd FileType tex nnoremap up<TAB> /usepackage<cr>o\usepackage{}<Esc>i
 	autocmd FileType tex inoremap fig<TAB> \begin{figure}[h]<cr>\centering<cr>\includegraphics[width=0.5\textwidth]{a}<cr><++><cr>\end{figure}<cr><cr><++><Esc>?a<cr>ci{
+	autocmd FileType tex inoremap if<TAB> \begin{center}<cr>\testbf{insert figure !!!}<cr>\end{center}<cr><cr>
 	autocmd FileType tex inoremap beg<TAB> \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c

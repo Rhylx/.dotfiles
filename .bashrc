@@ -44,7 +44,9 @@ alias teg="sdcv --utf8-output -uc \"English - German\""
 alias tef="sdcv --utf8-output -uc \"English - French\""
 alias tgf="sdcv --utf8-output -uc \"German - French\""
 alias la="ls -all"
+alias ll="ls -l"
 alias pi="ping -c 3 google.com"
+alias tp="sensors"
 
 # Sourcing shortcuts
 
