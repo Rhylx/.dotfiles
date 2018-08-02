@@ -1,0 +1,56 @@
+\nonstopmode
+\expandafter\ifx\csname pdfobjcompresslevel\endcsname\relax\else\pdfobjcompresslevel0\fi
+\ifnum\the\pdftexversion<140\errmessage{Pdftex is too old. Set IPEANCIENTPDFTEX environment variable!}\fi
+\documentclass{article}
+\usepackage{xcolor}
+\newdimen\ipefs
+\newcounter{ipePage}\newcounter{ipeView}
+\newcounter{ipePages}\newcounter{ipeViews}
+\newcommand{\PageTitle}[1]{#1}
+\newcommand{\ipesymbol}[4]{$\bullet$}
+\definecolor{red}{rgb}{1,0,0}
+\definecolor{green}{rgb}{0,1,0}
+\definecolor{blue}{rgb}{0,0,1}
+\definecolor{yellow}{rgb}{1,1,0}
+\definecolor{orange}{rgb}{1,0.647,0}
+\definecolor{gold}{rgb}{1,0.843,0}
+\definecolor{purple}{rgb}{0.627,0.125,0.941}
+\definecolor{gray}{gray}{0.745}
+\definecolor{brown}{rgb}{0.647,0.165,0.165}
+\definecolor{navy}{rgb}{0,0,0.502}
+\definecolor{pink}{rgb}{1,0.753,0.796}
+\definecolor{seagreen}{rgb}{0.18,0.545,0.341}
+\definecolor{turquoise}{rgb}{0.251,0.878,0.816}
+\definecolor{violet}{rgb}{0.933,0.51,0.933}
+\definecolor{darkblue}{rgb}{0,0,0.545}
+\definecolor{darkcyan}{rgb}{0,0.545,0.545}
+\definecolor{darkgray}{gray}{0.663}
+\definecolor{darkgreen}{rgb}{0,0.392,0}
+\definecolor{darkmagenta}{rgb}{0.545,0,0.545}
+\definecolor{darkorange}{rgb}{1,0.549,0}
+\definecolor{darkred}{rgb}{0.545,0,0}
+\definecolor{lightblue}{rgb}{0.678,0.847,0.902}
+\definecolor{lightcyan}{rgb}{0.878,1,1}
+\definecolor{lightgray}{gray}{0.827}
+\definecolor{lightgreen}{rgb}{0.565,0.933,0.565}
+\definecolor{lightyellow}{rgb}{1,1,0.878}
+\definecolor{black}{gray}{0}
+\definecolor{white}{gray}{1}
+\def\ipesetcolor#1#2#3{\pdfcolorstack0 push{#1 #2 #3 rg #1 #2 #3 RG}}
+\def\iperesetcolor{\pdfcolorstack0 pop}
+
+
+
+
+\pagestyle{empty}
+\newcount\bigpoint\dimen0=0.01bp\bigpoint=\dimen0
+\begin{document}
+\begin{picture}(500,500)
+\setbox0=\hbox{\normalsize
+\ipesetcolor{0}{0}{0}%
+$u$%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 1 /IpeStretch 1 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\end{picture}
+\end{document}
