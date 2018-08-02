@@ -25,7 +25,7 @@
 
 " Source .vimrc :
 
-	map so :so ~/.vimrc<cr>
+	map <leader>r :so $MYVIMRC<cr>
 
 " Pathogen (plug-in manager) :
 
@@ -33,7 +33,7 @@
 
 " Goyo plug-in (for composing in the best conditions) :
 
-	map gy :Goyo<cr>
+	map gy :Goyo <bar> highlight StatusLineNC ctermfg=white<cr>
 	inoremap gy<TAB> <Esc>:Goyo<cr>a
 
 " Automatically deletes all tralling whitespace when file is saved :
