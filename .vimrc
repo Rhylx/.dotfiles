@@ -23,9 +23,18 @@
 	vnoremap <C-c> "*y :let @+=@*<cr>
 	map <C-p> "+p
 
+" Source .vimrc :
+
+	map so :so ~/.vimrc<cr>
+
 " Pathogen (plug-in manager) :
 
 	execute pathogen#infect()
+
+" Goyo plug-in (for composing in the best conditions) :
+
+	map gy :Goyo<cr>
+	inoremap gy<TAB> <Esc>:Goyo<cr>a
 
 " Automatically deletes all tralling whitespace when file is saved :
 
