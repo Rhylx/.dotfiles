@@ -33,8 +33,10 @@
 
 " Goyo plug-in (for composing in the best conditions) :
 
-	map gy :Goyo <bar> highlight StatusLineNC ctermfg=white<cr>
-	inoremap gy<TAB> <Esc>:Goyo<cr>a
+	map gy :Goyo 50%x90% <bar> highlight StatusLineNC ctermfg=white<cr>
+	map gyo :Goyo!<cr>
+	inoremap gy<TAB> <Esc>:Goyo 50%x90% <bar> highlight StatusLineNC ctermfg=white<cr>a
+	inoremap gyo<TAB> <Esc>:Goyo!<cr>a
 
 " Automatically deletes all tralling whitespace when file is saved :
 
