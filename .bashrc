@@ -5,14 +5,13 @@
 
 set -o vi
 bind '"\C-l": clear-screen'
+shopt -s autocd
 
 # If not running interactively, don't do anything
 
 [[ $- != *i* ]] && return
 
 alias ls='ls -hN --color=auto --group-directories-first'
-
-# Setting bash prompt :
 
 # Bash prompt :
 
@@ -47,6 +46,7 @@ alias la="ls -all"
 alias ll="ls -l"
 alias pi="ping -c 3 google.com"
 alias tp="sensors"
+alias progs="(pacman -Qet && pacman -Qm) | sort -u" # List programs I've installed
 
 # Sourcing shortcuts
 

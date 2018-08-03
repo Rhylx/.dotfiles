@@ -46,11 +46,35 @@
 \newcount\bigpoint\dimen0=0.01bp\bigpoint=\dimen0
 \begin{document}
 \begin{picture}(500,500)
-\setbox0=\hbox{\normalsize
+\setbox0=\hbox{\Large
 \ipesetcolor{0}{0}{0}%
-$u$%
+r%
 \iperesetcolor}
 \count0=\dp0\divide\count0 by \bigpoint
 \pdfxform attr{/IpeId 1 /IpeStretch 1 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\Large
+\ipesetcolor{0}{0}{0}%
+$M_2$%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 2 /IpeStretch 1 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\Large
+\ipesetcolor{0}{0}{0}%
+$M_2$%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 3 /IpeStretch 1 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\Large
+\ipesetcolor{0}{0}{0}%
+$M_0$%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 4 /IpeStretch 1 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
+\setbox0=\hbox{\Large
+\ipesetcolor{0}{0}{0}%
+$M_1$%
+\iperesetcolor}
+\count0=\dp0\divide\count0 by \bigpoint
+\pdfxform attr{/IpeId 5 /IpeStretch 1 /IpeDepth \the\count0}0\put(0,0){\pdfrefxform\pdflastxform}
 \end{picture}
 \end{document}
