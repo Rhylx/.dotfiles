@@ -1,0 +1,14 @@
+# You can add comments to these files with #
+d	~/Documents
+D	~/Downloads
+m	~/Music
+h	~
+sd	~/.stardict/dic
+pp	~/Pictures
+vv	~/Videos
+ss	~/.scripts
+cf	~/.config
+rr	~/Repos
+vb	~/.vim/bundle
+re	~/Repos/Reports
+r42	~/Repos/rendu_42

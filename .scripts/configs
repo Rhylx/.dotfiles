@@ -1,0 +1,10 @@
+cff	~/.scripts/folders
+cfc	~/.scripts/configs
+cfb	~/.bashrc
+cfz	~/.config/zathura/zathurarc
+cfv	~/.vimrc
+cfr	~/.config/ranger/rc.conf
+cfi	~/.config/i3/config
+cfq	~/.config/qutebrowser/config.py
+cfm	~/.config/mutt/muttrc
+cfd	~/.Xdefaults
