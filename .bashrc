@@ -33,6 +33,7 @@ alias gpl="git pull"
 alias ga="git add"
 alias gc="git commit"
 alias gcl="git clone"
+alias gl="git log"
 alias mkd="mkdir -pv"
 alias rfb="source ~/.bashrc"
 alias bw="wal -i ~/.config/wall.png"
@@ -47,7 +48,7 @@ alias ll="ls -l"
 alias pi="ping -c 3 google.com"
 alias tp="sensors"
 alias progs="(pacman -Qet && pacman -Qm) | sort -u" # List programs I've installed
+alias gw='gcc -Wall -Wextra -Werror'
 
 # Sourcing shortcuts
-
 source /home/rhylx/.bash_shortcuts

@@ -79,10 +79,10 @@ xkb_symbols "editing" {
     key <DELE> {	[  Delete		]	};
     key  <END> {	[  End			]	};
     key <PGDN> {	[  Next			]	};
-    
+
     // To comment out at the end of the customisation :
 
-      key   <UP> {	[  Up			]	};
+//    key   <UP> {	[  Up			]	};
 //    key <LEFT> {	[  Left			]	};
 //    key <DOWN> {	[  Down			]	};
 //    key <RGHT> {	[  Right		]	};

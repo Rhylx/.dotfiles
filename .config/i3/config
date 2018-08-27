@@ -10,7 +10,7 @@ exec_always xset r rate 200 50
 
 ## Font settings :
 
-font pango:monospace 12
+font pango:monospace 10
 
 ## Border style :
 
