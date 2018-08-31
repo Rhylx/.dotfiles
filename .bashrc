@@ -50,7 +50,10 @@ alias ll="ls -l"
 alias pi="ping -c 3 google.com"
 alias tp="sensors"
 alias progs="(pacman -Qet && pacman -Qm) | sort -u" # List programs I've installed
-alias gw='gcc -Wall -Wextra -Werror'
+alias gw="gcc -Wall -Wextra -Werror"
+alias gpw="pass -c"
+alias pa="pass insert"
+alias pg="pass generate"
 
 # Sourcing shortcuts
 source /home/rhylx/.bash_shortcuts
