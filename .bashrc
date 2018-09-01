@@ -54,6 +54,7 @@ alias gw="gcc -Wall -Wextra -Werror"
 alias gpw="pass -c"
 alias pa="pass insert"
 alias pg="pass generate"
+alias sm="sc-im"
 
 # Sourcing shortcuts
 source /home/rhylx/.bash_shortcuts
