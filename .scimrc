@@ -1,0 +1,14 @@
+" My scimrc file :
+
+" Base :
+
+set autocalc
+set numeric
+set set xlsx_readformulas
+
+" Aliases :
+
+nnoremap "ZZ" ":x<cr>"
+nnoremap "ZQ" ":q!<cr>"
+
+" For plotting, go watch gnuplots man...
