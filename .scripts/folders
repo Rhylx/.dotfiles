@@ -11,4 +11,5 @@ cf	~/.config
 rr	~/Repos
 vb	~/.vim/bundle
 re	~/Repos/Reports
-r42	~/Repos/rendu_42
+rbs	~/Repos/RBS
+bu	~/Repos/backup
