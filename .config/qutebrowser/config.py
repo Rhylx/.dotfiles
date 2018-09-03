@@ -855,7 +855,7 @@ c.hints.border = '1px solid #E3BE23'
 
 ## Characters used for hint strings.
 ## Type: UniqueCharString
-c.hints.chars = 'asdfghjkl'
+c.hints.chars = 'qsfhjkl'
 
 ## Dictionary file to be used by the word hints.
 ## Type: File
