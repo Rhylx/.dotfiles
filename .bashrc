@@ -55,6 +55,7 @@ alias rp="pass -c"
 alias pa="pass insert"
 alias pg="pass generate"
 alias sm="sc-im"
+alias ytv="youtube-viewer"
 
 # Sourcing shortcuts
 source /home/rhylx/.bash_shortcuts
