@@ -12,6 +12,26 @@ exec_always xset r rate 200 50
 
 font pango:monospace 10
 
+## Color settings :
+
+set_from_resource $darkblack	color0  #000000
+set_from_resource $black	color8  #000000
+set_from_resource $darkred	color1  #000000
+set_from_resource $red		color9  #000000
+set_from_resource $darkgreen	color2  #000000
+set_from_resource $green	color10 #000000
+set_from_resource $darkyellow	color3  #000000
+set_from_resource $yellow	color11 #000000
+set_from_resource $darkblue	color4  #000000
+set_from_resource $blue		color12 #000000
+set_from_resource $darkmagenta	color5  #000000
+set_from_resource $magenta	color13 #000000
+set_from_resource $darkcyan	color6  #000000
+set_from_resource $cyan		color14 #000000
+set_from_resource $darkwhite	color7  #000000
+set_from_resource $white	color15 #000000
+set $transparent		#00000000
+
 ## Border style :
 
 for_window [class="^.*"] border pixel 2
@@ -40,7 +60,7 @@ floating_modifier $mod
 #bindsym $mod+shift+a
 
 bindsym $mod+b 		  exec --no-startup-id $BROWSER
-#bindsym $mod+shift+b
+bindsym $mod+shift+b	  floating toggle; sticky toggle; exec --no-startup-id bottomleft
 
 #bindsym $mod+c
 bindsym $mod+Shift+c 	  reload
@@ -84,7 +104,7 @@ bindsym $mod+shift+o	  exec --no-startup-id "bash ~/.scripts/i3resize up"
 #bindsym $mod+p
 bindsym $mod+shift+p	  exec --no-startup-id "bash ~/.scripts/i3resize right"
 
-bindsym $mod+q 		  kill
+bindsym $mod+q 		  [con_id="__focused__" instance="^(?!stuff).*$"] kill
 #bindsym $mod+shift+q
 
 bindsym $mod+r 		  exec $term -e ranger
@@ -153,7 +173,7 @@ for_window [instance="stuff"] floating enable
 for_window [instance="stuff"] resize set 600 400
 for_window [instance="stuff"] move scratchpad
 for_window [instance="stuff"] border pixel 0
-exec_always --no-startup-id $term -n stuff
+exec --no-startup-id $term -n stuff
 
 # change container layout (stacked, tabbed, toggle split)
 
