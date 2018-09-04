@@ -25,7 +25,7 @@ fi
 alias sdn="sudo shutdown now"
 alias p="sudo pacman"
 alias psy="sudo pacman -S"
-alias pq="sudo pacman -Qn | grep"
+alias pq="pacman -Qn | grep"
 alias v="vim"
 alias ka="killall"
 alias g="git"
