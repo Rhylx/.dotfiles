@@ -110,7 +110,7 @@ bindsym $mod+q 		  [con_id="__focused__" instance="^(?!stuff).*$"] kill
 bindsym $mod+r 		  exec $term -e ranger
 bindsym $mod+Shift+r 	  restart
 
-#bindsym $mod+s
+bindsym $mod+s		 exec --no-startup-id "scrot -e 'mv $f ~/Screenshots'"
 #bindsym $mod+shift+s
 
 #bindsym $mod+t
