@@ -62,7 +62,7 @@ floating_modifier $mod
 bindsym $mod+b 		  exec --no-startup-id $BROWSER
 bindsym $mod+shift+b	  floating toggle; sticky toggle; exec --no-startup-id bottomleft
 
-#bindsym $mod+c
+bindsym $mod+c		  exec $term weechat
 bindsym $mod+Shift+c 	  reload
 
 bindsym $mod+d 		  gaps inner current set 10. gaps outer current set 10
@@ -92,7 +92,7 @@ bindsym $mod+shift+k 	  move up 30
 bindsym $mod+l 		  focus right
 bindsym $mod+shift+l 	  move right 30
 
-#bindsym $mod+m
+#bindsym $mod+m		  bar mode toggle
 #bindsym $mod+shift+m
 
 bindsym $mod+n		 exec --no-startup-id ~/.config/i3/lock

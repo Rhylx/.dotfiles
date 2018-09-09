@@ -8,4 +8,4 @@ cfi	~/.config/i3/config
 cfq	~/.config/qutebrowser/config.py
 cfm	~/.config/mutt/muttrc
 cfd	~/.Xdefaults
-cfmpv	~/.config/mpv/input.conf
+cfp	~/.config/mpv/input.conf
