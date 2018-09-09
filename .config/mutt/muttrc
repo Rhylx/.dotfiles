@@ -1,8 +1,7 @@
 # This is a test for my gmail account :
 
-set folder	= imaps://imap.gmail.com/
-set imap_user	= redbull11570@gmail.com
-set imap_pass	= "76A'W~q)}&P$=+."
+set folder	= imaps://accesbv.univ-lyon1.fr
+set imap_user	= p1615780
+source "~/.config/mutt/Retrieve_Password/retrievepass |"
 set spoolfile	= +INBOX
 mailboxes	= +INBOX
-
