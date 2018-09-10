@@ -1,7 +1,29 @@
-# This is a test for my gmail account :
+## vim: filetype=neomuttrc
+## General config for all accounts :
 
-set folder	= imaps://accesbv.univ-lyon1.fr
-set imap_user	= p1615780
-source "~/.config/mutt/Retrieve_Password/retrievepass |"
-set spoolfile	= +INBOX
-mailboxes	= +INBOX
+set editor = $EDITOR
+source personal.muttrc
+#Security (user can't see unencrypted password):
+bind index,pager i noop
+bind index,pager g noop
+bind index,pager \Cf noop
+bind editor <space> noop
+
+set sort = 'reverse-date'
+set date_format = "%d/%m/%y %I:%M"
+set index_format = "%3C %zs %?X?A& ? %D %-15.15F %s (%-4.4c)" #To clearify...
+
+## General bindings :
+bind index G last-entry
+bind index gg first-entry
+bind pager j next-line
+bind pager k previous-line
+bind pager gg top
+bind pager G bottom
+bind index J half-down
+bind index K half-up
+bind index D delete-message
+bind index U undelete-message
+bind index f search
+bind index,pager R group-reply
+

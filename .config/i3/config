@@ -92,7 +92,7 @@ bindsym $mod+shift+k 	  move up 30
 bindsym $mod+l 		  focus right
 bindsym $mod+shift+l 	  move right 30
 
-#bindsym $mod+m		  bar mode toggle
+bindsym $mod+m		  exec $term neomutt
 #bindsym $mod+shift+m
 
 bindsym $mod+n		 exec --no-startup-id ~/.config/i3/lock

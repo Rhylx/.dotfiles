@@ -1,0 +1,79 @@
+[general]
+accounts = ucbl, ecl, ensl, hotmail, gmail
+pythonfile = ~/.config/mutt/.offlineimap.py
+
+[Account ucbl]
+localrepository = ucbl-local
+remoterepository = ucbl-remote
+
+[Repository ucbl-local]
+type = Maildir
+localfolders = ~/.Mail/ucbl
+
+[Repository ucbl-remote]
+type = IMAP
+remotehost = accesbv.univ-lyon1.fr
+remoteuser = p1615780
+remotepasseval = get_pass("UCBL", "mdp")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account ecl]
+localrepository = ecl-local
+remoterepository = ecl-remote
+
+[Repository ecl-local]
+type = Maildir
+localfolders = ~/.Mail/ecl
+
+[Repository ecl-remote]
+type = IMAP
+remotehost = imap.ec-lyon.fr
+remoteuser = raphael.paegelow@ecl16.ec-lyon.fr
+remotepasseval = get_pass("ECL", "mdp")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account ensl]
+localrepository = ensl-local
+remoterepository = ensl-remote
+
+[Repository ensl-local]
+type = Maildir
+localfolders = ~/.Mail/ensl
+
+[Repository ensl-remote]
+type = IMAP
+remotehost = imap.ens-lyon.fr
+remoteuser = rpaegelo
+remotepasseval = get_pass("ENSL", "rpaegelo")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account hotmail]
+localrepository = hotmail-local
+remoterepository = hotmail-remote
+
+[Repository hotmail-local]
+type = Maildir
+localfolders = ~/.Mail/hotmail
+
+[Repository hotmail-remote]
+type = IMAP
+remotehost = imap-mail.outlook.com
+remoteuser = raphael-p@hotmail.fr
+remotepasseval = get_pass("Hotmail", "rp")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/.Mail/gmail
+
+[Repository gmail-remote]
+type = GMAIL
+remotehost = imap.gmail.com
+remoteuser = redbull11570@gmail.com
+remotepasseval = get_pass("gmail", "rd")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+

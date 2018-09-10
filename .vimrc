@@ -114,5 +114,5 @@
 	autocmd FileType tex inoremap up<TAB> <Esc>/usepackage<cr>o\usepackage{}<Esc>i
 	autocmd FileType tex nnoremap up<TAB> /usepackage<cr>o\usepackage{}<Esc>i
 	autocmd FileType tex inoremap fig<TAB> \begin{figure}[h]<cr>\centering<cr>\includegraphics[width=0.5\textwidth]{a}<cr><++><cr>\end{figure}<cr><cr><++><Esc>?a<cr>ci{
-	autocmd FileType tex inoremap if<TAB> \begin{center}<cr>\testbf{insert figure !!!}<cr>\end{center}<cr><cr>
+	autocmd FileType tex inoremap if<TAB> \begin{center}<cr>\textbf{insert figure !!!}<cr>\end{center}<cr><cr>
 	autocmd FileType tex inoremap beg<TAB> \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
