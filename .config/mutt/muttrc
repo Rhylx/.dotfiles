@@ -27,3 +27,5 @@ bind index U undelete-message
 bind index f search
 bind index,pager R group-reply
 
+## Ctr-R to mark all as read
+macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
