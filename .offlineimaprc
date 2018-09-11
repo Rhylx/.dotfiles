@@ -71,9 +71,9 @@ type = Maildir
 localfolders = ~/.Mail/gmail
 
 [Repository gmail-remote]
-type = GMAIL
-remotehost = imap.gmail.com
+type = Gmail
 remoteuser = redbull11570@gmail.com
 remotepasseval = get_pass("gmail", "rd")
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
