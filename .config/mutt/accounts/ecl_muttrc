@@ -1,0 +1,21 @@
+# vim: filetype=neomuttrc
+# muttrc file for account ecl
+set realname = "ecl"
+set from = "raphael.paegelow@ecl16.ec-lyon.fr"
+
+set folder = "~/.Mail/ecl"
+
+set mbox_type = Maildir
+source "~/.config/mutt/Retrieve_Passwords/retrieve_password ECL/mdp |"
+
+alias me ecl <raphael.paegelow@ecl16.ec-lyon.fr>
+
+mailboxes = ecl =------------------- "=INBOX" "=Sent" "=Drafts" "=Junk" "=Trash"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=Sent<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=Drafts<enter>" "Go to drafts."
+macro index,pager gt "<change-folder>=Trash<enter>" "Go to trash."
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set postponed = "+Drafts"
+set trash = "+Trash"

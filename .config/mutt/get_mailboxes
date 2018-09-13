@@ -1,0 +1,50 @@
+#!/bin/bash
+
+muttdir="$HOME/.config/mutt/"
+
+# Create folders to save mails:
+rm -rf ~/./Mail/$1
+tmpdir=$(mktemp -d)
+offlineimap --info -a $1 2&> "$tmpdir"/log
+sed -n '/^Folderlist/,/^Folderlist/p' "$tmpdir"/log | grep "^ "|
+sed -e "s/\//./g;s/(.*//g;s/^ //g" > "$tmpdir"/lognew
+while read box; do mkdir -p "$HOME/.Mail/$1/$box"; done <"$tmpdir"/lognew
+
+# Configure the mailboxes to link neomutt and offlineimap :
+
+gen_delim() { \
+	delim="="
+	for i in `seq $(( $1 - 1 ))`
+	do
+		delim="$delim-"
+	done
+	echo $delim ;}
+
+formatShortcut() { \
+	while read data; do
+	echo "macro index,pager g$1 \"<change-folder>$data<enter>\" \"Go to $2.\"" >> "$muttdir"accounts/$3_muttrc
+	done ;}
+
+
+find ~/.Mail/$1 -maxdepth 1 -mindepth 1 -type d | sed -e "s/.*\///g;s/^/=/g" >"$tmpdir"/$1_boxes
+sidebar_width=$(sed -n -e '/^set sidebar_width/p' ~/.config/mutt/muttrc | awk -F'=' '{print $2}')
+delim=$(gen_delim $sidebar_width)
+oneline=$(cat "$tmpdir"/$1_boxes | sed -e "s/^\|$/\"/g" | tr "\n" " ")
+oneline=" = $1 $delim $oneline"
+sed -i "/^mailboxes\|^set record\|^set postponed\|^set trash\|^set spoolfile/d" "$muttdir"accounts/$1_muttrc
+echo mailboxes $oneline >> "$muttdir"accounts/$1_muttrc
+sed -i "/^macro index,pager g/d" "$muttdir"accounts/$1_muttrc
+grep -i "$tmpdir"/$1_boxes -e inbox | sed 1q | formatShortcut i inbox $1
+grep -i "$tmpdir"/$1_boxes -e sent | sed 1q | formatShortcut s sent $1
+grep -i "$tmpdir"/$1_boxes -e draft | sed 1q | formatShortcut d drafts $1
+grep -i "$tmpdir"/$1_boxes -e trash | sed 1q | formatShortcut t trash $1
+grep -i "$tmpdir"/$1_boxes -e spam | sed 1q | formatShortcut S spam $1
+grep -i "$tmpdir"/$1_boxes -e archive | sed 1q | formatShortcut a archive $1
+spoolfile=$(grep -i "$tmpdir"/$1_boxes -e inbox | sed -e 's/=/+/g' | sed 1q)
+record=$(grep -i "$tmpdir"/$1_boxes -e sent | sed -e 's/=/+/g' | sed 1q)
+postponed=$(grep -i "$tmpdir"/$1_boxes -e draft | sed -e 's/=/+/g' | sed 1q)
+trash=$(grep -i "$tmpdir"/$1_boxes -e trash | sed -e 's/=/+/g' | sed 1q)
+echo "set spoolfile = \"$spoolfile\"" >> "$muttdir"accounts/$1_muttrc
+echo "set record = \"$record\"" >> "$muttdir"accounts/$1_muttrc
+echo "set postponed = \"$postponed\"" >> "$muttdir"accounts/$1_muttrc
+echo "set trash = \"$trash\"" >> "$muttdir"accounts/$1_muttrc

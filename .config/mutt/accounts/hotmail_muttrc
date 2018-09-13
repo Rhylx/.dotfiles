@@ -1,0 +1,21 @@
+# vim: filetype=neomuttrc
+# muttrc file for account hotmail
+set realname = "hotmail"
+set from = "raphael-p@hotmail.fr"
+
+set folder = "~/.Mail/hotmail"
+
+set mbox_type = Maildir
+source "~/.config/mutt/Retrieve_Passwords/retrieve_password Hotmail/rp |"
+
+alias me hotmail <raphael-p@hotmail.fr>
+
+mailboxes = hotmail =------------------- "=Inbox" "=Sent" "=Drafts" "=Junk" "=Deleted"
+macro index,pager gi "<change-folder>=Inbox<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=Sent<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=Drafts<enter>" "Go to drafts."
+macro index,pager ga "<change-folder>=Archive<enter>" "Go to archive."
+set spoolfile = "+Inbox"
+set record = "+Sent"
+set postponed = "+Drafts"
+set trash = "Deleted"

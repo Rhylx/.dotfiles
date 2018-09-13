@@ -1,0 +1,22 @@
+# vim: filetype=neomuttrc
+# muttrc file for account gmail
+set realname = "gmail"
+set from = "redbull11570@gmail.com"
+
+set folder = "~/.Mail/gmail"
+
+set mbox_type = Maildir
+source "~/.config/mutt/Retrieve_Passwords/retrieve_password gmail/rd |"
+
+alias me gmail <redbull11570@gmail.com>
+
+mailboxes = gmail =------------------- "=INBOX" "=[Gmail].Messages envoy&AOk-s" "=[Gmail].Brouillons" "=[Gmail].Corbeille" "=[Gmail].Spam"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=[Gmail].Messages envoy&AOk-s<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=[Gmail].Brouillons<enter>" "Go to drafts."
+macro index,pager gt "<change-folder>=[Gmail].Corbeille<enter>" "Go to trash."
+macro index,pager gS "<change-folder>=[Gmail].Spam<enter>" "Go to spam."
+set spoolfile = "+INBOX"
+set record = "+[Gmail].Messages envoy&AOk-s"
+set postponed = "+[Gmail].Brouillons"
+set trash = "+[Gmail].Corbeille"

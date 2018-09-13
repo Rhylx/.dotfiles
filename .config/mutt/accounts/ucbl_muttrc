@@ -5,6 +5,16 @@ set from = "raphael.paegelow@etu.univ-lyon1.fr"
 
 set folder = "~/.Mail/ucbl"
 
+set mbox_type = Maildir
 source "~/.config/mutt/Retrieve_Passwords/retrieve_password UCBL/mdp |"
 
 alias me ucbl <raphael.paegelow@etu.univ-lyon1.fr>
+
+mailboxes = ucbl =------------------- "=INBOX" "=Sent Items" "=Drafts" "=Junk Email" "=Deleted Items"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=Sent Items<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=Drafts<enter>" "Go to drafts."
+set spoolfile = "+INBOX"
+set record = "+Sent Items"
+set postponed = "+Drafts"
+set trash = "+Deleted Items"

@@ -1,0 +1,21 @@
+# vim: filetype=neomuttrc
+# muttrc file for account ensl
+set realname = "ensl"
+set from = "raphael.paegelow@ens-lyon.fr"
+
+set folder = "~/.Mail/ensl"
+
+set mbox_type = Maildir
+source "~/.config/mutt/Retrieve_Passwords/retrieve_password ENSL/rpaegelo |"
+
+alias me ensl <raphael.paegelow@ens-lyon.fr>
+
+mailboxes = ensl =------------------- "=INBOX" "=INBOX.Sent" "=INBOX.Drafts" "=INBOX.Trash"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=INBOX.Sent<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=INBOX.Drafts<enter>" "Go to drafts."
+macro index,pager gt "<change-folder>=INBOX.Trash<enter>" "Go to trash."
+set spoolfile = "+INBOX"
+set record = "+INBOX.Sent"
+set postponed = "+INBOX.Drafts"
+set trash = "+INBOX.Trash"

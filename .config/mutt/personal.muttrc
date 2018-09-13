@@ -1,1 +1,8 @@
-source ~/.config/mutt/accounts/ucbl_muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/rhylx/.config/mutt/accounts/ensl_muttrc<enter><change-folder>!<enter>;<check-stats>'
+source ~/.config/mutt/accounts/ensl_muttrc
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/rhylx/.config/mutt/accounts/hotmail_muttrc<enter><change-folder>!<enter>;<check-stats>'
+macro index,pager i3 '<sync-mailbox><enter-command>source /home/rhylx/.config/mutt/accounts/gmail_muttrc<enter><change-folder>!<enter>;<check-stats>'
+macro index,pager i4 '<sync-mailbox><enter-command>source /home/rhylx/.config/mutt/accounts/ecl_muttrc<enter><change-folder>!<enter>;<check-stats>'
+macro index,pager i5 '<sync-mailbox><enter-command>source /home/rhylx/.config/mutt/accounts/ucbl_muttrc<enter><change-folder>!<enter>;<check-stats>'
+
+
