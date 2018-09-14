@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script will run offlineimap and check
+# for new email if there is an internet connection.
+#
+# I have this run as a cronjob every 5 minutes.
+# Checks for internet connection and set notification script.
+# Settings are different for MacOS (Darwin) systems.
+ping -q -w 1 -c 1 `ip r | grep -m 1 default | cut -d ' ' -f 3` >/dev/null || exit
+
+# Run offlineimap. You can feed this script different settings.
+offlineimap -o "$@"

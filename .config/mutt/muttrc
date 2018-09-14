@@ -9,6 +9,7 @@ bind index,pager i noop
 bind index,pager g noop
 bind index,pager \Cf noop
 source personal.muttrc
+source muttcol
 bind editor <space> noop
 
 set sort = 'reverse-date'
