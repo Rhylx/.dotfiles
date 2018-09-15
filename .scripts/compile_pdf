@@ -10,11 +10,17 @@
 file=$(basename "$1")
 ext="${file##*.}"
 base="${file%.*}"
+command="pdflatex"
 
-echo $ext
+textype(){ \
+	cp ~/.config/uni.bib ./
+	$command "$base";
+	biber "$base";
+	$command "$base"
+	}
 
 case "$ext" in
 	rmd) echo "require(rmarkdown); render('$file')" | R --vanilla ;;
-	tex) pdflatex "$file" ;;
+	tex) textype "$file" ;;
 	md) pandoc "$file" --pdf-engine=pdflatex -o "$base".pdf ;;
 esac
