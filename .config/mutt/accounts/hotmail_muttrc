@@ -2,7 +2,7 @@
 # muttrc file for account hotmail
 set realname = "hotmail"
 set from = "raphael-p@hotmail.fr"
-
+set sendmail = "/usr/bin/msmtp -a hotmail"
 set folder = "~/.Mail/hotmail"
 
 set mbox_type = Maildir

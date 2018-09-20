@@ -2,7 +2,7 @@
 # muttrc file for account ecl
 set realname = "ecl"
 set from = "raphael.paegelow@ecl16.ec-lyon.fr"
-
+set sendmail = "/usr/bin/msmtp -a ecl"
 set folder = "~/.Mail/ecl"
 
 set mbox_type = Maildir

@@ -2,7 +2,7 @@
 # muttrc file for account ucbl
 set realname = "ucbl"
 set from = "raphael.paegelow@etu.univ-lyon1.fr"
-
+set sendmail = "/usr/bin/msmtp -a ucbl"
 set folder = "~/.Mail/ucbl"
 
 set mbox_type = Maildir

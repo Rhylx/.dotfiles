@@ -4,5 +4,3 @@ macro index,pager i2 '<sync-mailbox><enter-command>source /home/rhylx/.config/mu
 macro index,pager i3 '<sync-mailbox><enter-command>source /home/rhylx/.config/mutt/accounts/gmail_muttrc<enter><change-folder>!<enter>;<check-stats>'
 macro index,pager i4 '<sync-mailbox><enter-command>source /home/rhylx/.config/mutt/accounts/ecl_muttrc<enter><change-folder>!<enter>;<check-stats>'
 macro index,pager i5 '<sync-mailbox><enter-command>source /home/rhylx/.config/mutt/accounts/ucbl_muttrc<enter><change-folder>!<enter>;<check-stats>'
-
-

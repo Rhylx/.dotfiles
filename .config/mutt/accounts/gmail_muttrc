@@ -2,7 +2,7 @@
 # muttrc file for account gmail
 set realname = "gmail"
 set from = "redbull11570@gmail.com"
-
+set sendmail = "/usr/bin/msmtp -a gmail"
 set folder = "~/.Mail/gmail"
 
 set mbox_type = Maildir

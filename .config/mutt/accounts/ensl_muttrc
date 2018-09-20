@@ -2,7 +2,7 @@
 # muttrc file for account ensl
 set realname = "ensl"
 set from = "raphael.paegelow@ens-lyon.fr"
-
+set sendmail = "/usr/bin/msmtp -a ensl"
 set folder = "~/.Mail/ensl"
 
 set mbox_type = Maildir
