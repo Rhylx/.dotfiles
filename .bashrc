@@ -59,6 +59,7 @@ alias pg="pass generate"
 alias sm="sc-im"
 alias ytv="youtube-viewer"
 alias nm="neomutt"
+alias nb="newsboat -u ~/Repos/backup/urls"
 
 # Sourcing shortcuts
 source /home/rhylx/.bash_shortcuts

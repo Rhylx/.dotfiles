@@ -1,0 +1,3 @@
+@daily /bin/rm -rf ~/Goinfre/*
+*/5 * * * * ~/.config/mutt/mailsync
+*/15 * * * * /usr/bin/newsboat -u ~/Repos/backup/urls -x reload

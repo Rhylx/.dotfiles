@@ -125,7 +125,7 @@ bindsym $mod+shift+v      split v
 #bindsym $mod+w
 #bindsym $mod+shift+w
 
-#bindsym $mod+x
+bindsym $mod+x		exec $term newsboat -u ~/Repos/backup/urls
 #bindsym $mod+shift+x
 
 bindsym $mod+y		gaps inner current minus 5
