@@ -18,7 +18,7 @@ read -r c < "$p"/counter
 read -r n < "$p"/number
 
 update_val() {\
-	file=$(find "$wpath"reddit/Earthporn "$wpath"Luke\'s_Wallpapers/Landscapes "$wpath"Luke\'s_Wallpapers/Spacescapes -maxdepth 1 -mindepth 1| sort -R | head -n 1)
+	file=$(find "$wpath"Reddit/Earthporn "$wpath"Luke\'s_Wallpapers/Landscapes "$wpath"Luke\'s_Wallpapers/Spacescapes -maxdepth 1 -mindepth 1| sort -R | head -n 1)
  	cp $file $HOME/.config/wall.png && feh --bg-scale $file
 	echo 0 > "$p"/counter
 	n=$(shuf -i 10-20 -n 1)
