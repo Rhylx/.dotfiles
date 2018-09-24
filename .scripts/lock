@@ -13,7 +13,6 @@ sleep 5 && [[ 4000 -lt $(xssstate -i) ]] && xset dpms force off
 
 #Choose after a random number of locks a random wallpaper :
 
-echo p > file
 read -r c < "$p"/counter
 read -r n < "$p"/number
 

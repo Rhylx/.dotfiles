@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Feed script a url.
+# If an image, it will view in feh,
+# if a video or gif, it will view in mpv
+# if it's a pdf it will download it into Goinfre and open it with zathura : TO DO
+# otherwise it opens link in browser.
+
+name=$(echo "$1" |rev | cut -d / -f1 | rev)
+
+case "$1" in
+	*mkv|*webm|*mp4|*gif|*youtube.com*|*hooktube.com*)
+		setsid mpv -quiet "$1" >/dev/null 2>&1 & ;;
+	*png|*jpg|*jpe|*jpeg)
+		setsid feh "$1" >/dev/null 2>&1 & ;;
+	*pdf)
+		wget -O $HOME/Goinfre/"$name" "$1" >/dev/null 2>&1
+		zathura $HOME/Goinfre/"$name" ;;
+	*) setsid "$CLIBROWSER" "$1" >/dev/null 2>&1 & ;;
+esac

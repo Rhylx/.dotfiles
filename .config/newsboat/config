@@ -1,3 +1,8 @@
+# Configuration :
+
+confirm-exit yes
+external-url-viewer urlview
+
 # Keybindings :
 
 bind-key j down

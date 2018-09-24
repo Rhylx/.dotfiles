@@ -30,6 +30,9 @@
 " Pathogen (plug-in manager) :
 
 	execute pathogen#infect()
+" Urlview :
+
+	nnoremap <leader>u :w<Home>silent <End> !urlview<cr>
 
 " Goyo plug-in (for composing in the best conditions) :
 
