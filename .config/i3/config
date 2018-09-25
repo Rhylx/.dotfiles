@@ -56,98 +56,101 @@ floating_modifier $mod
 
 ## Main  Bindings (logic of it : every key and its shift version) :
 
-bindsym $mod+a		  exec --no-startup-id spotify
+bindsym $mod+a			exec --no-startup-id spotify
 #bindsym $mod+shift+a
 
-bindsym $mod+b 		  exec --no-startup-id $BROWSER
-bindsym $mod+shift+b	  floating toggle; sticky toggle; exec --no-startup-id bottomleft
+bindsym $mod+b			exec --no-startup-id $BROWSER
+bindsym $mod+shift+b		floating toggle; sticky toggle; exec --no-startup-id bottomleft
 
-bindsym $mod+c		  exec $term weechat
-bindsym $mod+Shift+c 	  reload
+bindsym $mod+c			exec $term weechat
+bindsym $mod+Shift+c		reload
 
-bindsym $mod+d 		  gaps inner current set 10. gaps outer current set 10
-bindsym $mod+shift+d	  exec dmenu_run
+bindsym $mod+d			gaps inner current set 10. gaps outer current set 10
+bindsym $mod+shift+d		exec dmenu_run
 
-bindsym $mod+e		  [instance="stuff"] scratchpad show; [instance="stuff"] move position center
+bindsym $mod+e			[instance="stuff"] scratchpad show; [instance="stuff"] move position center
 #bindsym $mod+shift+e
 
-bindsym $mod+f 		  fullscreen toggle
-bindsym $mod+shift+f	  gaps inner current set 0; gaps outer current set 0
+bindsym $mod+f			fullscreen toggle
+bindsym $mod+shift+f		gaps inner current set 0; gaps outer current set 0
 
-bindsym $mod+g		  exec --no-startup-id gimp
+bindsym $mod+g			exec --no-startup-id gimp
 #bindsym $mod+shift+g
 
-bindsym $mod+h 		  focus left
-bindsym $mod+shift+h 	  move left 30
+bindsym $mod+h			focus left
+bindsym $mod+shift+h		move left 30
 
-bindsym $mod+i		  exec --no-startup-id ipe
-bindsym $mod+shift+i	  exec --no-startup-id "bash ~/.scripts/i3resize down"
+bindsym $mod+i			exec --no-startup-id ipe
+bindsym $mod+shift+i		exec --no-startup-id "bash ~/.scripts/i3resize down"
 
-bindsym $mod+j		  focus down
-bindsym $mod+shift+j 	  move down 30
+bindsym $mod+j			focus down
+bindsym $mod+shift+j		move down 30
 
-bindsym $mod+k 		  focus up
-bindsym $mod+shift+k 	  move up 30
+bindsym $mod+k			focus up
+bindsym $mod+shift+k		move up 30
 
-bindsym $mod+l 		  focus right
-bindsym $mod+shift+l 	  move right 30
+bindsym $mod+l			focus right
+bindsym $mod+shift+l		move right 30
 
-bindsym $mod+m		  exec $term neomutt
+bindsym $mod+m			exec $term neomutt
 #bindsym $mod+shift+m
 
-bindsym $mod+n		 exec --no-startup-id lock
+bindsym $mod+n			exec --no-startup-id lock
 #bindsym $mod+shift+n
 
 #bindsym $mod+o
-bindsym $mod+shift+o	  exec --no-startup-id "bash ~/.scripts/i3resize up"
+bindsym $mod+shift+o		exec --no-startup-id "bash ~/.scripts/i3resize up"
 
-bindsym $mod+p		  exec --no-startup-id passmenu
-bindsym $mod+shift+p	  exec --no-startup-id "bash ~/.scripts/i3resize right"
+bindsym $mod+p			exec --no-startup-id passmenu
+bindsym $mod+shift+p		exec --no-startup-id "bash ~/.scripts/i3resize right"
 
-bindsym $mod+q 		  [con_id="__focused__" instance="^(?!stuff).*$"] kill
+bindsym $mod+q			[con_id="__focused__" instance="^(?!stuff).*$"] kill
 #bindsym $mod+shift+q
 
-bindsym $mod+r 		  exec $term -e ranger
-bindsym $mod+Shift+r 	  restart
+bindsym $mod+r			exec $term -e ranger
+bindsym $mod+Shift+r		restart
 
-bindsym $mod+s		 exec --no-startup-id "scrot -e 'mv $f ~/Screenshots'"
+bindsym $mod+s			exec --no-startup-id "scrot -e 'mv $f ~/Screenshots'"
 #bindsym $mod+shift+s
 
-#bindsym $mod+t
-bindsym $mod+shift+t	  exec $term -e  htop
+bindsym $mod+t			exec $term rtv
+bindsym $mod+shift+t		exec $term -e  htop
 
 #bindsym $mod+u
-bindsym $mod+shift+u	  exec --no-startup-id "bash ~/.scripts/i3resize left"
+bindsym $mod+shift+u		exec --no-startup-id "bash ~/.scripts/i3resize left"
 
-bindsym $mod+v 		  split h
-bindsym $mod+shift+v      split v
+bindsym $mod+v			split h
+bindsym $mod+shift+v		split v
 
 #bindsym $mod+w
 #bindsym $mod+shift+w
 
-bindsym $mod+x		exec $term newsboat -u ~/Repos/backup/urls
+bindsym $mod+x			exec $term newsboat -u ~/Repos/backup/urls
 #bindsym $mod+shift+x
 
-bindsym $mod+y		gaps inner current minus 5
-bindsym $mod+shift+y	gaps inner current plus 5
+bindsym $mod+y			gaps inner current minus 5
+bindsym $mod+shift+y		gaps inner current plus 5
 
-bindsym $mod+z		gaps outer current minus 5
-bindsym $mod+shift+z	gaps outer current plus 5
+bindsym $mod+z			gaps outer current minus 5
+bindsym $mod+shift+z		gaps outer current plus 5
 
-bindsym $mod+Return       exec $term
-bindsym $mod+shift+Return exec $term
+bindsym $mod+Return		exec $term
+bindsym $mod+shift+Return	exec $term
 
 
-bindsym $mod+space 	  floating toggle
-bindsym $mod+Shift+space  focus mode_toggle
+bindsym $mod+space		floating toggle
+bindsym $mod+Shift+space	focus mode_toggle
 
-bindsym $mod+period     workspace next
+bindsym $mod+period		workspace next
 #bindsym $mod+shift+period
 
-bindsym $mod+comma      workspace prev
+bindsym $mod+comma		workspace prev
 #bindsym $mod+shift+comma
 
-bindsym F1		exec --no-startup-id turn_off_screen
+bindsym F1			exec --no-startup-id turn_off_screen
+
+bindsym $mod+F4			exec --no-startup-id sudo -A systemctl restart NetworkManager
+
 # this is for kill i3 :
 
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
