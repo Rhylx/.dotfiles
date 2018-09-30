@@ -12,6 +12,7 @@ source personal.muttrc
 source muttcol
 bind editor <space> noop
 
+set mailcap_path = ~/.config/mutt/mailcap
 set sort = 'reverse-date'
 set date_format = "%d/%m/%y %I:%M"
 set index_format = "%3C %zs %?X?A& ? %D %-15.15F %s (%-4.4c)" #To clearify...
@@ -32,10 +33,16 @@ bind index U undelete-message
 bind index f search
 bind index,pager R group-reply
 
+# View attachements properly
+
+bind attach <return> view-mailcap
+
 ## Ctr-R to mark all as read
+
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
 
 ## Sync mail
+
 macro index O "<shell-escape>$HOME/.config/mutt/mailsync<enter>" "run offlineimap to sync all mailboxes"
 macro index o "<shell-escape>$HOME/.config/mutt/mailsync -qf INBOX<enter>" "run offlineimap to sync inbox"
 
