@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wpath="$HOME/Documents/Wallpapers/"
+wpath="$HOME/Images/Wallpapers/"
 p="$HOME/.scripts/"
 
 # Lock the screen with a blurted screenshot + a centered pic lock.png :

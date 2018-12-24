@@ -30,6 +30,7 @@ bind index J half-down
 bind index K half-up
 bind index D delete-message
 bind index U undelete-message
+macro index,pager \Cu |urlview\n
 bind index f search
 bind index,pager R group-reply
 

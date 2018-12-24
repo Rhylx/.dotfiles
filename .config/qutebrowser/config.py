@@ -429,7 +429,7 @@ c.completion.use_best_match = False
 ## Number of URLs to show in the web history. 0: no history / -1:
 ## unlimited
 ## Type: Int
-c.completion.web_history_max_items = -1
+c.completion.web_history.max_items = -1
 
 ## Require a confirmation before quitting the application.
 ## Type: ConfirmQuit
@@ -1035,7 +1035,7 @@ c.qt.highdpi = False
 
 ## Show a scrollbar.
 ## Type: Bool
-c.scrolling.bar = False
+#c.scrolling.bar = False
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not
 ## work with the `:scroll-px` command.
