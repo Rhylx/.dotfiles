@@ -69,6 +69,10 @@
 
 	autocmd VimLeave *.tex !texclear
 
+" Automatic compilation of an suckless utility after saving a config.h file :
+
+	autocmd VimLeave config.h !sudo make install
+
 " Automatic compile and preview tex file :
 
 	autocmd Filetype tex setl updatetime=1
