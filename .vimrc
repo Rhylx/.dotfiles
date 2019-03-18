@@ -84,9 +84,9 @@
 
 " Navigating with sweetie guides (the one from Luke Smith are pretty nice):
 
-	inoremap <Space><Tab> <Esc>/<++><cr>"_c4l
-	vnoremap <Space><Tab> <Esc>/<++><cr>"_c4l
-	map <Space><Tab> <Esc>/<++><cr>"_c4l
+	inoremap <leader><Tab> <Esc>/<++><cr>"_c4l
+	vnoremap <leader><Tab> <Esc>/<++><cr>"_c4l
+	map <leader><Tab> <Esc>/<++><cr>"_c4l
 
 " Aliases :
 	nnoremap gp '"zz
@@ -102,7 +102,6 @@
 
 """LATEX/General :
 
-	" count words with F3:
 	autocmd FileType tex map <F3> :w !detex \| wc -w<cr>
 	autocmd FileType tex inoremap <F3> <ESC>:w !detex \| wc -w<cr>
 
@@ -122,4 +121,6 @@
 	autocmd FileType tex nnoremap up<TAB> /usepackage<cr>o\usepackage{}<Esc>i
 	autocmd FileType tex inoremap fig<TAB> \begin{figure}[h]<cr>\centering<cr>\includegraphics[width=0.5\textwidth]{a}<cr><++><cr>\end{figure}<cr><cr><++><Esc>?a<cr>ci{
 	autocmd FileType tex inoremap if<TAB> \begin{center}<cr>\textbf{insert figure !!!}<cr>\end{center}<cr><cr>
-	autocmd FileType tex inoremap beg<TAB> \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
+	autocmd FileType tex inoremap beg<TAB> \begin{}<Enter><++><Enter><Esc>2kf{a
+	autocmd FileType tex inoremap cls<TAB> <++><Esc>?\\begin{<cr>yy/<++><cr>"_d4lplcwend<esc><cr>i
+	autocmd FileType tex inoremap fct<TAB> $\begin{array}{ccccc}<cr>f & : & \mathbf{R} & \to & \mathbf{R}\\<cr>& & x & \mapsto & s \\<cr>\end{array}$\\<cr><++><Esc>?s<cr>cw

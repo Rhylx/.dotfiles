@@ -59,6 +59,7 @@ alias pa="pass insert"
 alias pg="pass generate"
 alias sm="sc-im"
 alias ytv="youtube-viewer"
+alias ytd="youtube-dl"
 alias nm="neomutt"
 alias nb="newsboat -u ~/Repos/backup/urls"
 
