@@ -1,6 +1,6 @@
 # vim: filetype=neomuttrc
 # muttrc file for account ensl
-set realname = "ensl"
+set realname = "raphael"
 set from = "raphael.paegelow@ens-lyon.fr"
 set sendmail = "/usr/bin/msmtp -a ensl"
 set folder = "~/.Mail/ensl"
@@ -8,7 +8,7 @@ set folder = "~/.Mail/ensl"
 set mbox_type = Maildir
 source "~/.config/mutt/Retrieve_Passwords/retrieve_password ENSL/rpaegelo |"
 
-alias me ensl <raphael.paegelow@ens-lyon.fr>
+alias me raphael <raphael.paegelow@ens-lyon.fr>
 
 mailboxes = ensl =------------------- "=INBOX" "=INBOX.Sent" "=INBOX.Drafts" "=INBOX.Trash"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
