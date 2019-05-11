@@ -23,6 +23,7 @@ fi
 # Aliases :
 
 alias sdn="sudo shutdown now"
+alias sctl="sudo systemctl"
 alias p="sudo pacman"
 alias r="ranger"
 alias psy="sudo pacman -S"
