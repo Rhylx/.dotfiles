@@ -1,15 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
 wpath="$HOME/Images/Wallpapers/"
 p="$HOME/.scripts/"
 
 # Lock the screen with a blurted screenshot + a centered pic lock.png :
 scrot /tmp/shot.png
-convert /tmp/shot.png -paint 1 -blur 1x2 $HOME/.config/i3/lock.png -gravity center -composite /tmp/shot.png
+convert /tmp/shot.png -paint 1 -blur 1x2 "$HOME/.config/i3/lock.png" -gravity center -composite /tmp/shot.png
 i3lock -e -f -i /tmp/shot.png
 
 # In 5 seconds, turn off display  unless a key press in last 4 seconds :
-sleep 5 && [[ 4000 -lt $(xssstate -i) ]] && xset dpms force off
+sleep 5 && [ 4000 -lt "$(xssstate -i)" ] && xset dpms force off
 
 #Choose after a random number of locks a random wallpaper :
 
@@ -18,13 +18,13 @@ read -r n < "$p"/number
 
 update_val() {\
 	file=$(find "$wpath"Reddit/Earthporn "$wpath"Luke\'s_Wallpapers/Landscapes "$wpath"Luke\'s_Wallpapers/Spacescapes -maxdepth 1 -mindepth 1| sort -R | head -n 1)
- 	cp $file $HOME/.config/wall.png && feh --bg-scale $file
+ 	cp "$file" "$HOME/.config/wall.png" && feh --bg-scale "$file"
 	echo 0 > "$p"/counter
 	n=$(shuf -i 10-20 -n 1)
-	echo $n > "$p"/number ;}
+	echo "$n" > "$p"/number ;}
 
-if [ "$c" == "$n" ]; then
+if [ "$c" = "$n" ]; then
 	update_val
 else
-	((c++)) ; echo $c > "$p"/counter
+	c=$((c+1)) ; echo $c > "$p"/counter
 fi

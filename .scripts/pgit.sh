@@ -2,17 +2,17 @@
 # This basic script make pushing on git more easier
 
 cwd=$(pwd)
-d=$(basename $cwd)
+d=$(basename "$cwd")
 echo  "Is $d the right folder for simply adding to your repo the stuff you want?"
 select yn in "Yes" "No"; do
 	case $yn in
 	Yes )
-read -p "Which files do you want to add to git ?  " fadd
-read -p "What is your commit message ?  " mess
+read -rp "Which files do you want to add to git ?  " fadd
+read -rp "What is your commit message ?  " mess
 git add -u
 if [ "$fadd" != "" ]
 then
-	git add $fadd
+	git add "$fadd"
 fi
 git commit -m "$mess"
 git push

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # This is a compilation handler, so to speak, which I have vim run.
 #

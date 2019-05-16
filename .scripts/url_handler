@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Feed script a url.
 # If an image, it will view in feh,
@@ -14,7 +14,7 @@ case "$1" in
 	*png|*jpg|*jpe|*jpeg)
 		setsid feh "$1" >/dev/null 2>&1 & ;;
 	*pdf)
-		wget -O $HOME/Goinfre/"$name" "$1" >/dev/null 2>&1
-		zathura $HOME/Goinfre/"$name" ;;
+		wget -O "$HOME/Goinfre/$name" "$1" >/dev/null 2>&1
+		zathura "$HOME/Goinfre/$name" ;;
 	*) setsid "$CLIBROWSER" "$1" >/dev/null 2>&1 & ;;
 esac
