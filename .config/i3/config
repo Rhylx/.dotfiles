@@ -171,6 +171,10 @@ exec --no-startup-id compton --xrender-sync-fence
 
 exec --no-startup-id nm-applet
 
+## Starting dunst for notifications :
+
+exec --no-startup-id dunst
+
 # Scratchpad for running basic things that don't need a new terminal :
 
 for_window [instance="stuff"] floating enable

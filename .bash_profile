@@ -10,7 +10,3 @@ export TERMINAL="st"
 export BROWSER="qutebrowser"
 export CLIBROWSER="w3m"
 neofetch
-
-## Keymapping ## :
-
-sudo loadkeys /home/rhylx/.config/keymap
