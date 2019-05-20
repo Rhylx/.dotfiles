@@ -1,0 +1,19 @@
+command=~/.scripts/statusbar/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[battery]
+command=battery BAT0
+interval=5
+
+[volume]
+interval=once
+signal=10
+
+[clock]
+label=📅
+interval=30
+
+[internet]
+interval=10
+
