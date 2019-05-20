@@ -4,9 +4,10 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export PATH=$PATH:$HOME/.scripts:$HOME/.vim/bundle/vim-live-latex-preview/bin
+export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR="vim"
 export TERMINAL="st"
+export READER="zathura"
 export BROWSER="qutebrowser"
 export CLIBROWSER="w3m"
 neofetch

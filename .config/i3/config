@@ -233,7 +233,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # finds out, if available)
 
 bar {
-        status_command i3status
+	font pango:mono 9
+        status_command i3blocks
 	position top
 }
 
