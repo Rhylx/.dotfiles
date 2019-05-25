@@ -13,10 +13,10 @@ esac
 [ "$(cat /sys/class/net/w*/operstate)" = 'down' ] && wifiicon="📡"
 
 quality=$(iwlist wlp1s0 scanning | sed -e'5!d' -n -e 's/[^=]*\=//p' | cut -c 1,2)
-"quality=$quality*100/70"
+$((quality = $quality * 100 / 70))
 EESID=$(iwlist wlp1s0 scanning | sed -e'7!d' -n -e 's/[^"]*\"//p')
 EESID=${EESID%?}
-[ -z "${wifiicon+var}" ] && wifiicon="📶 $EESID: ${quality}%"
+[ -z "${wifiicon+var}" ] && wifiicon="📶 $EESID:${quality}%"
 
 
-printf "%s %s" "$wifiicon" "$(cat /sys/class/net/e*/operstate | sed "s/down/❎/;s/up/🌐/")"
+printf "%s %s" "$wifiicon" "$(cat /sys/class/net/e*/operstate | sed "s/down/❌/;s/up/🌐/")"
