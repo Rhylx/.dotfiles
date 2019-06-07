@@ -63,6 +63,7 @@ alias ytv="youtube-viewer"
 alias ytd="youtube-dl"
 alias nm="neomutt"
 alias nb="newsboat -u ~/Repos/backup/urls"
+alias dtp="ddjvu --format=pdf"
 
 # Sourcing shortcuts
 source /home/rhylx/.bash_shortcuts
