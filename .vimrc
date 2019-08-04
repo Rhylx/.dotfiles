@@ -63,7 +63,7 @@
 
  " Compile a document into pdf (rmd, tex, md) :
 
-	map <leader>c :w<cr> :!compile_pdf <c-r>%<cr><cr>
+	map <leader>c :w<cr>:!compile_pdf <c-r>%<cr><cr>
 
 " Runs script texclear when leaving .tex file :
 
