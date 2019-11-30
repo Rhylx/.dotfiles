@@ -3,26 +3,23 @@ include "linux-with-alt-and-altgr"
 strings as usual
 
 
-
 ## LAYOUT OVERVIEW
 ##  ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ _______
 ## |    |    |    |    |    |    |    |    |    |    |    |    |    | <--   |
 ## | ²  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 0  | +  | =  |       |
 ##  ========================================================================
-## | |<-  | A  | Z  | E  | R  | T  | Y  | U  | I  | O  | P  | `  | ¨  |   , |
-## |  ->| | a  | z  | e ç| r  | t  | y  | u  | i  | o  | p  | ´  | ^  | <-' |
+## | |<-  | Q  | W  | E  | R  | T  | Y  | U  | I  | O  | P  | `  | ¨  |   , |
+## |  ->| | q  | w  | e ç| r  | t  | y  | u  | i  | o  | p  | ´  | ^  | <-' |
 ##  ===================================================================¬    |
-## |       | Q  | S  | D  | F  | G  | H  | J  | K  | L  | M  | \  | µ  |    |
-## | ESC   | q @| s ~| d "| f #| g {| h [| j (| k -| l || m _| %  | *  |    |
+## |       | A  | S  | D  | F  | G  | H  | J  | K  | L  |?  | \  | µ  |    |
+## | ESC   | a @| s ~| d "| f #| g {| h [| j (| k -| l ||, &| %  | *  |    |
 ##  ========================================================================
-## | ^   | <  | W  | X  | C  | V  | B  | N  | ?  | ;  | /  | §  |     ^     |
-## | |   | >  | w \| x '| c $| v }| b ]| n )| , &| .  | :  | !  |     |     |
+## | ^   | <  | Z  | X  | C  | V  | B  | N  | M  | ;  | /  | §  |     ^     |
+## | |   | >  | z \| x '| c $| v }| b ]| n )| m _| .  | :  | !  |     |     |
 ##  ========================================================================
 ## |      |      |      |                       |       |      |     |      |
 ## | Ctrl | Super| Alt  | Space    Nobreakspace | AltGr | Super|Menu | Ctrl |
 ##  ¯¯¯¯¯¯ ¯¯¯¯¯¯ ¯¯¯¯¯¯ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ ¯¯¯¯¯¯¯ ¯¯¯¯¯¯ ¯¯¯¯¯ ¯¯¯¯¯¯
-
-
 
 keycode   1 = Caps_Lock
 keycode   2 = one
@@ -40,8 +37,8 @@ keycode  13 = equal
 keycode  14 = Delete		Delete
 keycode  15 = Tab		Meta_Tab
 #
-keycode  16 = a
-keycode  17 = z
+keycode  16 = q
+keycode  17 = w
 keycode  18 = e
 keycode  19 = r
 keycode  20 = t
@@ -56,7 +53,7 @@ keycode  27 = dead_circumflex	dead_diaeresis
 keycode  28 = Return
 keycode  29 = Control
 #
-keycode  30 = q
+keycode  30 = a
 	altgr keycode 30 = at
 keycode  31 = s
 	altgr keycode 31 = dead_tilde
@@ -74,15 +71,15 @@ keycode  37 = k
 	altgr keycode 37 = minus
 keycode  38 = l
 	altgr keycode 38 = bar
-keycode  39 = m
-	altgr keycode 39 = underscore
+keycode  39 = comma		question
+	altgr keycode 39 = ampersand
 #
 keycode  40 = percent		backslash
 keycode  41 = twosuperior
 keycode  42 = Shift
 keycode  43 = asterisk		mu
 #
-keycode  44 = w
+keycode  44 = z
 	altgr keycode 44 = backslash
 keycode  45 = x
 	altgr keycode 45 = apostrophe
@@ -95,8 +92,8 @@ keycode  48 = b
 keycode  49 = n
 	altgr keycode 49 = parenright
 #
-keycode  50 = comma		question
-	altgr keycode 50 = ampersand
+keycode  50 = m
+	altgr keycode 50 = underscore
 keycode  51 = period		semicolon
 keycode  52 = colon		slash
 keycode  53 = exclam		section
