@@ -36,7 +36,7 @@
 
 " Goyo plug-in (for composing in the best conditions) :
 
-	map gy :Goyo 50%x90% <bar> highlight StatusLineNC ctermfg=white<cr>
+	map gy :Goyo 70%x90% <bar> highlight StatusLineNC ctermfg=white<cr>
 	map gyo :Goyo!<cr>
 	inoremap gy<TAB> <Esc>:Goyo 50%x90% <bar> highlight StatusLineNC ctermfg=white<cr>a
 	inoremap gyo<TAB> <Esc>:Goyo!<cr>a
@@ -63,11 +63,21 @@
 
  " Compile a document into pdf (rmd, tex, md) :
 
-	map <leader>c :w<cr> :!compile_pdf <c-r>%<cr><cr>
+	map <leader>c :w<cr>:!compile_pdf <c-r>%<cr><cr>
 
 " Runs script texclear when leaving .tex file :
 
 	autocmd VimLeave *.tex !texclear
+
+" Runs script cleaner when leaving .hs file :
+
+	autocmd VimLeave *.hs !hsclear
+
+" Move the line one line below :
+	map - ddp
+
+" Move the line one line above :
+	map _ :move -2<cr>
 
 " Automatic compilation of an suckless utility after saving a config.h file :
 
@@ -100,6 +110,15 @@
 
 " Snippets :
 
+"Functions for snippets :
+
+fun! TexEnv(name)
+        let l:l = line(".") - 1
+        call append(l:l, "\\end{" . a:name . "}")
+        call append(l:l, "\\begin{" . a:name . "}")
+	call feedkeys("kO")
+endfun
+
 """LATEX/General :
 
 	autocmd FileType tex map <F3> :w !detex \| wc -w<cr>
@@ -121,6 +140,8 @@
 	autocmd FileType tex nnoremap up<TAB> /usepackage<cr>o\usepackage{}<Esc>i
 	autocmd FileType tex inoremap fig<TAB> \begin{figure}[h]<cr>\centering<cr>\includegraphics[width=0.5\textwidth]{a}<cr><++><cr>\end{figure}<cr><cr><++><Esc>?a<cr>ci{
 	autocmd FileType tex inoremap if<TAB> \begin{center}<cr>\textbf{insert figure !!!}<cr>\end{center}<cr><cr>
-	autocmd FileType tex inoremap beg<TAB> \begin{}<Enter><++><Enter><Esc>2kf{a
-	autocmd FileType tex inoremap cls<TAB> <++><Esc>?\\begin{<cr>yy/<++><cr>"_d4lplcwend<esc><cr>i
 	autocmd FileType tex inoremap fct<TAB> $\begin{array}{ccccc}<cr>f & : & \mathbf{R} & \to & \mathbf{R}\\<cr>& & x & \mapsto & s \\<cr>\end{array}$\\<cr><++><Esc>?s<cr>cw
+	autocmd FileType tex nnoremap <leader>e : call TexEnv(input("TeX environment name: "))<cr>
+	autocmd FileType tex inoremap <leader>hck $ $\newline<cr>\\<cr>
+
+
