@@ -4,7 +4,8 @@
 
 set $mod Mod4
 set $term --no-startup-id st
-exec_always xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap_mod $DISPLAY
+exec_always xkbcomp -i 11 -I$HOME/.config/xkb $HOME/.config/xkb/keymap $DISPLAY
+exec_always xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap_40 $DISPLAY -i $(xinput list --id-only 'Paul Keyboard')
 exec_always xset r rate 200 50
 
 
@@ -233,16 +234,16 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # finds out, if available)
 
 bar {
-	font pango:mono 9
+	font pango:mono 8
         status_command i3blocks
 	position top
 }
 
 # Extra shortcut with XF86 Keys
 
-bindsym XF86AudioMute		exec --no-startup-id pamixer --allow-boost -t
-bindsym XF86AudioLowerVolume	exec --no-startup-id pamixer --allow-boost -d 5
-bindsym XF86AudioRaiseVolume	exec --no-startup-id pamixer --allow-boost -i 5
+bindsym XF86AudioMute		exec --no-startup-id amixer set Master toggle
+bindsym XF86AudioLowerVolume	exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioRaiseVolume	exec --no-startup-id amixer set Master 5%+
 bindsym XF86PowerOff		exec --no-startup-id prompt "Are you sure you want to shutdown?" "$shutdown"
 ##bindsym XF86Copy		exec
 ##bindsym XF86Open		exec
@@ -290,9 +291,9 @@ bindsym XF86Reload		restart
 ##bindsym XF86Launch8		exec
 ##bindsym XF86Launch9		exec
 #bindsym XF86AudioMicMute	exec $micmute
-##bindsym XF86TouchpadToggle	exec
-bindsym XF86TouchpadOn		exec --no-startup-id exec synclient TouchpadOff=0
-bindsym XF86TouchpadOff		exec --no-startup-id exec synclient TouchpadOff=1
+bindsym XF86TouchpadToggle	exec --no-startup-id xinput disable 12
+bindsym XF86TouchpadOn		exec --no-startup-id xinput enable 12
+bindsym XF86TouchpadOff		exec --no-startup-id xinput disable 12
 bindsym XF86Suspend		exec --no-startup-id ~/.config/i3/lock.sh
 bindsym XF86Close		kill
 bindsym XF86WebCam		exec --no-startup-id camtoggle

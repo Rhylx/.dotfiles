@@ -22,6 +22,9 @@ fi
 
 # Aliases :
 
+alias work="cd ~/Reports/stage_initiation/Rapport; vim presentation.tex"
+alias rytch="cd ~/rytch"
+alias cr="cabal run"
 alias sdn="sudo shutdown now"
 alias sctl="sudo systemctl"
 alias p="sudo pacman"
@@ -65,5 +68,3 @@ alias nm="neomutt"
 alias nb="newsboat -u ~/Repos/backup/urls"
 alias dtp="ddjvu --format=pdf"
 
-# Sourcing shortcuts
-source /home/rhylx/.bash_shortcuts

@@ -10,6 +10,7 @@ xkb_symbols "basic" {
 // Author : 2018, Rhylx
 // Based on the fr(azerty) layout
 
+
 // LAYOUT 0 :
 //  ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____
 // |    | Q  | W  | e  | R  | T  | Y  | U  | I  | O  | P  | L2 |
@@ -35,7 +36,7 @@ xkb_symbols "basic" {
 // | L1 |  § |  / |  $ | 4  | 5  | 6  | [  |  ( |  { |  | |  | |
 // =============================================================
 // |  ^ |    |    |    |    |    |    |    |    |    |    |    |
-// |  | |    |    | 0  | 1  | 2  | 3  | ,  |  " | +  | &  |    |
+// |  | |    |    | 0  | 1  | 2  | 3  | ,  |  ' | +  | &  |    |
 // =============================================================
 // |    |    |    |    |    |         |    |    |    |    |    |
 // |    |    |CTRL| ENT| ESC|  SPACE  | <- | SUP| ALT|    |    |
@@ -51,12 +52,11 @@ xkb_symbols "basic" {
 // | L1 |  ~ |  \ |  $ | 4  | 5  | 6  | ]  |  ) |  } |  | |  | |
 // =============================================================
 // |  ^ |    |    |    |    |    |    |    |    |    |    |    |
-// |  | |  * | =  | 0  | 1  | 2  | 3  | :  |  ' |    |    |    |
+// |  | |  * | =  | 0  | 1  | 2  | 3  | :  |  " |    |    |    |
 // =============================================================
 // |    |    |    |    |    |         |    |    |    |    |    |
 // |    |    |CTRL| ENT| ESC|  SPACE  | <- | SUP| ALT|    |    |
 // =============================================================
-
 
 
     // Layout 0, First row
@@ -97,22 +97,22 @@ xkb_symbols "basic" {
     key <AE12>	{ [	at,		ccedilla			] };
 
     // Layout 1, First row
-    key <AE01>	{ [	numbersign,	numbersign       		] };
-    key <AE02>	{ [	greater,	greater				] };
-    key <AE03>	{ [	minus,		minus				] };
-    key <AE04>	{ [	7,		7				] };
-    key <AE05>	{ [	8,		8				] };
-    key <AE06>	{ [	9,		9				] };
-    //key <AE07>	{ [	7,		7				] };
-    //key <AE08>	{ [	8,		8				] };
-    //key <AE09>	{ [	9,		9				] };
-    //key <AE10>	{ [	0,		0				] };
+    key <AE01>	{ [	1,		1             			] };
+    key <AE02>	{ [	2,		2				] };
+    key <AE03>	{ [	3,		3				] };
+    key <AE04>	{ [	4,		4				] };
+    key <AE05>	{ [	5,		5				] };
+    key <AE06>	{ [	6,		6				] };
+    key <AE07>	{ [	7,		7				] };
+    key <AE08>	{ [	8,		8				] };
+    key <AE09>	{ [	9,		9				] };
+    key <AE10>	{ [	0,		0				] };
 
     // Layout 1, Second row
     key <KP1>	{ [	section,	section				] };
     key <KP2>	{ [	slash,		slash				] };
     key <KP8>	{ [	dollar,		dollar				] };
-    key <KP3>	{ [	4,		4				] };
+    key <KP3>	{ [	minus,		minus				] };
     key <AD11>	{ [	bracketleft, 	bracketleft			] };
     key <FK24>	{ [	parenleft,	parenleft			] };
     key <KP5>	{ [	braceleft,	braceleft			] };
@@ -120,8 +120,8 @@ xkb_symbols "basic" {
 
 
     // Layout 1, Third row
-    key <AC10>	{ [	0,		0				] };
-    key <KPSU>	{ [	1,		1				] };
+    key <AC10>	{ [	greater,	greater				] };
+    key <KPSU>	{ [	numbersign,	numbersign			] };
     key <AB08>	{ [	comma,		comma				] };
     key <SCLK>	{ [	apostrophe,	apostrophe			] };
     key <END>	{ [	plus,		plus				] };
@@ -143,29 +143,4 @@ xkb_symbols "basic" {
     key <KPDV>	{ [	percent,	percent				] };
     key <KPEQ>	{ [	colon,		colon				] };
     key <AC11>	{ [	quotedbl,	quotedbl			] };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 };
