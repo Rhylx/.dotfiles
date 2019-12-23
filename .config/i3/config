@@ -6,7 +6,7 @@ set $mod Mod4
 set $term --no-startup-id st
 exec_always xkbcomp -i 11 -I$HOME/.config/xkb $HOME/.config/xkb/keymap $DISPLAY
 exec_always xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/keymap_40 $DISPLAY -i $(xinput list --id-only 'Paul Keyboard')
-exec_always xset r rate 200 50
+exec_always xset r rate 250 40
 
 
 ## Font settings :
